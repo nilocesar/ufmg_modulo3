@@ -1,0 +1,108 @@
+<script>
+    window["aa10"] = {
+        indice: "aa10",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa10").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                _containerTela.find(".feedX").css('display', 'none');
+                _containerTela.find(".itemDY").on('click', function() {
+                    _containerTela.find(".feedPDF").css('display', 'flex');
+                });
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+                    course.liberarNavegacao();
+                })
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA10 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="792">
+            <div class="barraDataInit animated fadeInLeftBig delay0_8">
+                <div class="barraDataContent animated fadeInLeftBig delay2_2 branco">
+                    <div class="livro mr30"></div>
+                    <div>
+                        <div class="tituDa bold size32">
+                            LEITURA COMPLEMENTAR 4
+                        </div>
+                        <div class="mt5 size26 itemDY">
+                            Guia de Vigilância Epidemiológica
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lista posicionar animated fadeIn size30" px="914" py="270">
+            <div class="animated fadeInUp delay0_4 size48 bold laranja3 mb30">
+                PERÍODO DE INCUBAÇÃO
+            </div>
+            <div class="item animated fadeInUp delay0_8">
+                <div class="text">
+                    <span class="bold laranja3">Período de incubação:</span> é estimado entre<br> 1 a 14 dias, com mediana de 5 a 6 dias.
+                </div>
+            </div>
+            <div class="item animated fadeInUp delay1_2">
+                <div class="text">
+                    <span class="bold laranja3">Período de transmissibilidade:</span> em média,<br> 7 dias após o início dos sintomas.
+                </div>
+            </div>
+            <div class="itemBlock animated fadeInUp delay1_6 center mt30">
+                <div class="tituloBlock branco bold size32">
+                    IMPORTANTE
+                </div>
+                <div class="subConteud size26">
+                    Dados sugerem que indivíduos assintomáticos podem transmitir a infecção
+                </div>
+            </div>
+        </div>
+
+        <div class="imgX posicionar animated fadeIn delay0_4" px="285" py="200"></div>
+
+
+        <div class="feedX feedPDF animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <iframe src="anexos/leituraComplementar4/index.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

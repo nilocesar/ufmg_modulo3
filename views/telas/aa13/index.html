@@ -1,0 +1,92 @@
+<script>
+    window["aa13"] = {
+        indice: "aa13",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa13").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+                nav();
+
+            } else {
+
+            }
+
+            function nav() {
+
+
+
+                var section = _containerTela.find(".flexbox-slide");
+
+                function toggleAccordion() {
+
+                    section.removeClass('activeSlide');
+                    $(this).addClass('activeSlide');
+                    $(this).attr('comp', 1);
+
+                    var _comp = true;
+                    section.each(function(indice, item) {
+                        if (!$(item).attr('comp'))
+                            _comp = false;
+                    });
+
+                    if (_comp) {
+                        course.liberarNavegacao();
+                    }
+                }
+
+                section.on('click', toggleAccordion);
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA13 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="240">
+            <div class="branco">
+                <div class="size40 animated fadeInLeft delay0_4 bold">
+                    INVESTIGAÇÃO LABORATORIAL DO SARS-CoV-2
+                </div>
+            </div>
+        </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="350" py="422">
+
+            <div class="item animated fadeInDown delay0_8">
+                Diagnóstico laboratorial e conhecimentos sobre a circulação do vírus SARS-CoV-2 são fundamentais para o planejamento da vigilância epidemiológica.
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

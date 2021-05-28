@@ -1,0 +1,46 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA20 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                    background-size: cover; */
+}
+
+.containerAA20 .baseFundo {
+    background: url(../../img/aa20.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+                
+                Main Components 
+                
+                -------------------------------- */
+
+.containerAA20 .titulo {
+    position: absolute;
+    width: 663px;
+}
+
+.containerAA20 .list {
+    position: absolute;
+    width: 700px;
+}
+
+.containerAA20 .list {
+    font-size: 25px;
+}
+
+.containerAA20 .list ul li {
+    padding: 20px;
+    border-left: 12px solid #F48C0F;
+    margin: 20px 10px;
+    background: linear-gradient(rgba(247, 171, 80, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%);
+}

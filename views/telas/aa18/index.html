@@ -1,0 +1,219 @@
+<script>
+    window["aa18"] = {
+        indice: "aa18",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa18").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            //reset();
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                _containerTela.sanfona_horizontal();
+
+                _containerTela.find(".feedX").css('display', 'none');
+                _containerTela.find(".barraDataContent").on('click', function() {
+                    _containerTela.find(".feedPDF").css('display', 'flex');
+                });
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+                    course.liberarNavegacao();
+                })
+
+                _containerTela.find(".balao").css('display', 'none');
+                _containerTela.find(".linkIgG").hover(function() {
+                    _containerTela.find(".balao").css('display', 'flex');
+                }, function() {
+                    _containerTela.find(".balao").css('display', 'none');
+                });
+
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA18 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="840">
+            <div class="barraDataInit animated fadeInLeftBig delay1_6 itx" item=1>
+                <div class="barraDataContent animated fadeInLeftBig delay2_0 branco">
+                    <div class="livro mr30"></div>
+                    <div class="size24 itemDY">
+                        <div class="bold size30">
+                            SAIBA MAIS
+                        </div>
+                        <div class="link">
+                            Guia de Vigilância Epidemiológica - pg 15 a 21
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="lista posicionar animated fadeIn size30 azul1" px="335" py="238">
+
+            <div class="animated fadeInUp delay0_8 bold size42">
+                DEFINIÇÃO DE CASO
+                <span class="animated fadeInUp delay1_0 size30">
+                    (Caso confirmado)
+                </span>
+            </div>
+
+
+        </div>
+
+        <div class="blockT posicionar animated fadeIn delay1_2 size26" px="335" py="300">
+            Clique nas abas:
+        </div>
+
+        <div class="bloco posicionar animated fadeIn delay1_2" px="335" py="340">
+            <div class="flexbox-slider">
+
+                <div class="flexbox-slide activeSlide" comp=1>
+                    <!-- <div class="fundoColor"></div> -->
+
+                    <div class="text-tab azul">
+                        <span class="bold">
+                            1. POR CRITÉRIO CLÍNICO 
+                        </span>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+
+
+                    <div class="textSlide branco size25">
+                        <div>
+                            Caso de Síndrome Gripal (SG) OU Síndrome Respiratória Aguda Grave (SRAG) com confirmação clínica associado a anosmia (perda do olfato) OU ageusia (disfunção gustatória) aguda sem outra causa pregressa.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flexbox-slide">
+                    <!-- <div class="fundoColor"></div> -->
+
+                    <div class="text-tab azul">
+                        <span class="bold">
+                            2. POR CRITÉRIO CLÍNICO-EPIDEMIOLÓGICO 
+                        </span>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+
+                    <div class="textSlide branco size25">
+                        <div>
+                            Caso de SG ou SRAG com histórico de contato próximo ou domiciliar, nos 14 dias anteriores ao aparecimento dos sinais e sintomas com caso confirmado para COVID-19.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flexbox-slide">
+
+                    <div class="text-tab azul">
+                        <span class="bold">
+                            3. POR CRITÉRIO CLÍNICO-IMAGEM
+                        </span>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+
+                    <div class="textSlide branco size22">
+                        <div>
+                            <div>
+                                Caso de SG ou SRAG ou óbito por SRAG em que não foi possível confirmar por critério laboratorial e que apresente pelo menos uma das seguintes alterações tomográficas:
+                            </div>
+                            <ul class="mt5">
+                                <li>
+                                    <span class="bold">OPACIDADE EM VIDRO FOSCO</span> periférico, bilateral, com ou sem consolidação ou linhas intralobulares visíveis ("pavimentação"), OU
+                                </li>
+                                <li>
+                                    <span class="bold">OPACIDADE EM VIDRO FOSCO</span> multifocal de morfologia arredondada com ou sem consolidação ou linhas intralobulares visíveis ("pavimentação"), OU
+                                </li>
+                                <li>
+                                    <span class="bold">SINAL DE HALO REVERSO</span> ou outros achados de pneumonia em organização (observados posteriormente na doença).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flexbox-slide">
+
+                    <div class="text-tab azul">
+                        <span class="bold">
+                            4. POR CRITÉRIO LABORATORIAL EM INDIVÍDUO <br>ASSINTOMÁTICO COM RESULTADO DE EXAME
+                        </span>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+
+                    <div class="textSlide branco size22">
+                        <ul>
+                            <li>
+                                <span class="bold">BIOLOGIA MOLECULAR:</span> resultado <span class="bold">DETECTÁVEL</span> para <br>SARS-CoV-2 realizado pelo método RT-PCR em tempo real.
+                            </li>
+                            <li>
+                                <span class="bold">IMUNOLÓGICO:</span> resultado REAGENTE para IgM, IgA e/ou <span class="linkIgG">IgG*
+                                </span> realizado pelos seguintes métodos:
+                                <ul class="mt15">
+                                    <li>
+                                        Ensaio imunoenzimático (<span class="book_italic">Enzyme-Linked Immunosorbent <br>Assay</span> - ELISA);
+                                    </li>
+                                    <li>
+                                        Imunocromatografia (teste rápido) para detecção <br>de anticorpos.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="balao posicionar animated fadeIn size26 azul1" px="905" py="330">
+            <div>
+                *Considerar o resultado IgG reagente como critério laboratorial confirmatório somente em indivíduos sem diagnóstico laboratorial anterior para COVID-19.
+            </div>
+        </div>
+
+
+        <div class="feedX feedPDF animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <iframe src="anexos/leituraComplementar4/index.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

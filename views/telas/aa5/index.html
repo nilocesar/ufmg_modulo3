@@ -1,0 +1,187 @@
+<script>
+    window["aa5"] = {
+        indice: "aa5",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa5").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                controle();
+
+            } else {
+                _containerTela.find(".item1 .txF").removeClass('delay1_4')
+                _containerTela.find(".item1").removeClass('delay0_8')
+                    // _containerTela.find(".item1").addClass('delay0_6')
+                _containerTela.find(".item2").removeClass('delay2_0')
+                    // _containerTela.find(".item2").addClass('delay0_8')
+            }
+
+            function controle() {
+
+                _containerTela.find(".item").css('display', 'none');
+                _containerTela.find(".txF").css('display', 'none');
+
+                nextInit(_containerTela.find(".item1"), 2);
+                _containerTela.find(".item2").addClass('delay2_0');
+
+
+                _containerTela.find(".item").on('click', function() {
+
+                    var _item = $(this).attr('item');
+                    var _next = parseInt($(this).attr('item')) + 1;
+                    var _all = _containerTela.find(".item").length;
+
+                    nextInit($(this), _next);
+
+                    if (_item == _all) {
+                        course.liberarNavegacao();
+                        _containerTela.find(".barraData").css('display', 'flex');
+                    }
+
+                });
+
+                function nextInit(_item, _next) {
+
+                    _item.addClass('itemAtivo');
+                    _item.find('.ico').addClass('icoAtivo');
+                    _item.find('.ico').removeClass('animated infinite pulse');
+                    _item.find('.txF').css('display', 'flex');
+                    _containerTela.find(".item" + _next).css('display', 'flex')
+                }
+
+                _containerTela.find(".barraData").css('display', 'none');
+                _containerTela.find(".feedX").css('display', 'none');
+                _containerTela.find(".itemDY").on('click', function() {
+                    _containerTela.find(".feedPDF").css('display', 'flex');
+                });
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+                    course.liberarNavegacao();
+                })
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA5 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="792">
+            <div class="barraDataInit animated fadeInLeftBig delay0_6">
+                <div class="barraDataContent animated fadeInLeftBig delay1_0 branco">
+                    <div class="livro mr30"></div>
+                    <div>
+                        <div class="tituDa bold size32">
+                            LEITURA COMPLEMENTAR 2
+                        </div>
+                        <div class="mt5 size26 itemDY">
+                            Coronavírus SARS-CoV-2 e COVID-19
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tit posicionar animated fadeIn" px="350" py="250">
+            <div class="branco">
+                <div class="size48 animated fadeInLeft delay0_4 bold">
+                    O VÍRUS SARS-CoV-2
+                </div>
+            </div>
+        </div>
+
+        <div class="list posicionar animated fadeIn" px="350" py="380">
+
+            <div class="its size26">
+
+                <div class="item item1 animated fadeInUp delay0_8" item=1>
+                    <div class="ico animated infinite pulse up size26 bold center">
+                        <i class="fas fa-check size40 branco"></i>
+                    </div>
+                    <div class="txtD">
+                        <div class="txF animated fadeInLeft delay1_4">
+                            A doença COVID-19 é uma enfermidade respiratória causada pelo coronavírus SARS-CoV-2.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item2 animated fadeInUp" item=2>
+                    <div class="ico animated infinite pulse up size26 bold center">
+                        <i class="fas fa-check size40 branco"></i>
+                        <i class="fas fa-plus size40 branco"></i>
+                    </div>
+                    <div class="txtD">
+                        <div class="txF animated fadeInLeft">
+                            Os coronavírus são uma grande família de vírus que causam doenças que variam desde o resfriado comum até doenças mais graves, como a Síndrome Respiratória do Oriente Médio (MERS) e a Síndrome Respiratória Aguda Grave (SARS).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item3 animated fadeInUp" item=3>
+                    <div class="ico animated infinite pulse up size26 bold center">
+                        <i class="fas fa-check size40 branco"></i>
+                        <i class="fas fa-plus size40 branco"></i>
+                    </div>
+                    <div class="txtD">
+                        <div class="txF animated fadeInLeft">
+                            Os humanos têm pouca ou nenhuma imunidade a este vírus.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item4 animated fadeInUp" item=4>
+                    <div class="ico animated infinite pulse up size26 bold center">
+                        <i class="fas fa-check size40 branco"></i>
+                        <i class="fas fa-plus size40 branco"></i>
+                    </div>
+                    <div class="txtD">
+                        <div class="txF animated fadeInLeft">
+                            O vírus se espalha facilmente de pessoa para pessoa.
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="feedX feedPDF animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <iframe src="anexos/leituraComplementar2/index.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

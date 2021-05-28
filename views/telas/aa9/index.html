@@ -1,0 +1,139 @@
+<script>
+    window["aa9"] = {
+        indice: "aa9",
+        status: false,
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa9").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            _containerTela.find(".feedX").css('display', 'none');
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                controle();
+
+            } else {
+
+            }
+
+            function controle() {
+
+                _containerTela.find(".feedX").css('display', 'none');
+
+                var _item = null;
+                _containerTela.find(".itx").on('click', function() {
+
+                    $(this).attr('ativo', '1')
+
+                    _item = $(this).attr('item');
+                    _containerTela.find(".feed" + _item).css('display', 'flex');
+                });
+
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+
+
+                    var _comp = true;
+                    _containerTela.find(".itx").each(function(indice, item) {
+
+                        if (!$(item).attr('ativo')) {
+                            _comp = false;
+                        }
+                    })
+
+                    if (_comp)
+                        course.liberarNavegacao();
+
+                });
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA9 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="792">
+            <div class="barraDataInit animated fadeInLeftBig delay0_6 itx" item=1>
+                <div class="barraDataContent animated fadeInLeftBig delay1_0 branco">
+                    <div class="livro mr30"></div>
+                    <div>
+                        <div class="tituDa bold size32">
+                            LEITURA COMPLEMENTAR 3
+                        </div>
+                        <div class="mt5 size26 itemDY">
+                            Condições de trabalho e falta de informações sobre o impacto <br>da COVID-19 entre trabalhadores da saúde
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tit posicionar animated fadeIn" px="350" py="240">
+            <div class="branco">
+                <div class="size38 animated fadeInLeft delay0_4 bold">
+                    A DIFERENÇA ENTRE TRANSMISSÃO<br> POR GOTÍCULAS E PELO AR
+                </div>
+            </div>
+        </div>
+
+        <div class="bloco posicionar animated fadeIn delay0_8" px="305" py="365">
+
+            <div class="imgX animated fadeIn delay1_0"></div>
+            <div class="txtX size30 animated fadeIn delay1_2">
+                <div class="itX">
+                    <div class="bold laranja mb5">Pelo ar</div>
+                    <div>
+                        Pequenas partículas (aerossóis) ficam suspensas no ar por mais tempo e viajam mais longe
+                    </div>
+                </div>
+
+                <div class="itX mt20">
+                    <div class="bold laranja mb5">Gotículas</div>
+                    <div>
+                        Tosses e espirros podem espalhar gotículas de saliva e muco
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="feedX feed1 feedPDF animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <iframe src="anexos/leituraComplementar3/index.html" frameborder="0"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

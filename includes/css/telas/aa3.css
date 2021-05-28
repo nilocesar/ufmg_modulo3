@@ -1,0 +1,55 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA3 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                background-size: cover; */
+}
+
+.containerAA3 .baseFundo {
+    background: url(../../img/aa3.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+            
+            Main Components 
+            
+            -------------------------------- */
+
+.containerAA3 .titulo {
+    position: absolute;
+    width: 700px;
+}
+
+.containerAA3 .list {
+    position: relative;
+    width: 100%;
+}
+
+.containerAA3 .item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 20px;
+    /* padding: 20px 0; */
+}
+
+.containerAA3 .icoX {
+    position: relative;
+    width: 10%;
+}
+
+.containerAA3 .txtX {
+    position: relative;
+    width: 90%;
+}

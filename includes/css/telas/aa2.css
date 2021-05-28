@@ -1,0 +1,52 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA2 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                background-size: cover; */
+}
+
+.containerAA2 .baseFundo {
+    background: url(../../img/aa2.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+            
+            Main Components 
+            
+            -------------------------------- */
+
+.containerAA2 .titulo {
+    position: absolute;
+    width: 663px;
+}
+
+.containerAA2 .list {
+    position: absolute;
+    width: 697px;
+    height: 575px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.containerAA2 .list ul {
+    font-size: 25px;
+}
+
+.containerAA2 .list ul li {
+    padding: 20px;
+    border-left: 12px solid #528BDF;
+    margin: 20px 10px;
+    background: linear-gradient(rgba(196, 216, 244, 0.4) 0%, rgba(255, 255, 255, 0.5) 100%);
+}

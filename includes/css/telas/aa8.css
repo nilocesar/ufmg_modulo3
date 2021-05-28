@@ -1,0 +1,214 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA8 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                                    background-size: cover; */
+}
+
+.containerAA8 .baseFundo {
+    background: url(../../img/aa8.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+                                
+                                Main Components 
+                                
+                                -------------------------------- */
+
+.containerAA8 .tit {
+    position: absolute;
+    width: 1137px;
+    overflow: hidden;
+}
+
+.containerAA8 .bloco {
+    position: absolute;
+    width: 1111px;
+    height: 541px;
+    /* background-color: #041d37 !important; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 15px; */
+    /* border: 1px solid #FF5900; */
+    border-radius: 50px;
+}
+
+.containerAA8 .step {
+    display: none;
+    overflow: hidden;
+}
+
+.containerAA8 .step {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-color: #F48C0F; */
+    /* border-radius: 20px; */
+    /* padding: 0px 40px; */
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA8 .barraData {
+    position: absolute;
+    width: 1270px;
+    height: 75px;
+    overflow: hidden;
+}
+
+.containerAA8 .barraDataInit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #6FEC83;
+    border-top-right-radius: 200px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.containerAA8 .barraDataContent {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    background: #30BF58;
+    border-top-right-radius: 200px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 50px;
+}
+
+.containerAA8 .linkS {
+    text-decoration: underline;
+}
+
+.containerAA8 .subt1 {
+    position: absolute;
+    width: 1210px;
+}
+
+.containerAA8 .lista {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerAA8 .itemX {
+    position: relative;
+    width: 291px;
+    height: 409px;
+    border-radius: 20px;
+    border: 2px solid #30BF58;
+    overflow: hidden;
+    text-align: center;
+}
+
+.containerAA8 .imgBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #30BF58;
+    height: 50%;
+    color: #fff;
+    font-size: 25px;
+    font-family: "bold";
+    padding: 10px;
+}
+
+.containerAA8 .imgBlock .ico {
+    position: relative;
+    width: 150px;
+    height: 130px;
+    background: red;
+    margin-bottom: 10px;
+}
+
+.containerAA8 .itemX1 .ico {
+    background: url(../../img/img1AA8.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA8 .itemX2 .ico {
+    background: url(../../img/img2AA8.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA8 .itemX3 .ico {
+    background: url(../../img/img3AA8.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA8 .itemX4 .ico {
+    background: url(../../img/img4AA8.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA8 .txtBlcok {
+    position: relative;
+    height: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+
+.containerAA8 .baseFundoFeed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    /* border: 5px solid #33649E; */
+    background-color: rgba(35, 34, 34, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.containerAA8 .content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.containerAA8 .closeX {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.containerAA8 .closeX:hover {
+    color: #33649E;
+}
+
+.containerAA8 .content .ytplayer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

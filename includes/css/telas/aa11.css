@@ -1,0 +1,152 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA11 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                                    background-size: cover; */
+}
+
+.containerAA11 .baseFundo {
+    background: url(../../img/aa11.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+                                
+                                Main Components 
+                                
+                                -------------------------------- */
+
+.containerAA11 .tit {
+    position: absolute;
+    width: 1137px;
+    overflow: hidden;
+}
+
+.containerAA11 .list {
+    position: absolute;
+    width: 420px;
+}
+
+.containerAA11 .list ul {
+    font-size: 22px;
+}
+
+.containerAA11 .list ul li {
+    padding: 20px;
+    border-left: 12px solid #EC7A50;
+    margin: 20px 10px;
+    background: linear-gradient(rgba(247, 171, 80, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.containerAA11 .imagem {
+    position: absolute;
+    width: 723px;
+    height: 446px;
+    background: url(../../img/img1AA11.png) no-repeat center;
+    background-size: contain;
+}
+
+:root {
+    --heightWidthAA11: 433px;
+    --heightBlocoAA11: 300px;
+    --heightAbaAA11: 60px;
+    --itensAbasAA11: 2;
+}
+
+.containerAA11 .blockT {
+    position: absolute;
+    width: var(--heightWidthAA11);
+}
+
+.containerAA11 .bloco {
+    position: absolute;
+    width: var(--heightWidthAA11);
+    height: var(--heightBlocoAA11);
+    /* background-color: #fff !important; */
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+.containerAA11 .flexbox-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    flex-direction: column;
+}
+
+.containerAA11 .flexbox-slider .flexbox-slide {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    height: var(--heightAbaAA11);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    visibility: visible;
+}
+
+
+/* .containerAA11  .flexbox-slide:hover {
+    flex-shrink: 0;
+    width: 80%;
+  } */
+
+.containerAA11 .activeSlide {
+    flex-shrink: 0;
+    height: calc( var(--heightBlocoAA11) - (var(--heightAbaAA11) * (var(--itensAbasAA11) - 1))) !important;
+}
+
+.containerAA11 .text-tab {
+    position: relative;
+    width: 100%;
+    height: var(--heightAbaAA11);
+    z-index: 99999999;
+    text-align: center;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #9f4524;
+    color: #9f4524;
+}
+
+.containerAA11 .text-tab i {
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    font-size: 50px;
+    /* opacity: 0.6; */
+}
+
+.containerAA11 .textSlide {
+    position: relative;
+    width: 100%;
+    height: calc( 100% - var(--heightAbaAA11));
+    background-color: #EC7A50;
+    z-index: 9999999;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA11 .textSlide ul {
+    list-style: disc;
+}

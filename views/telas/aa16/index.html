@@ -1,0 +1,123 @@
+<script>
+    window["aa16"] = {
+        indice: "aa16",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa16").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                _containerTela.aba();
+
+
+            } else {
+
+            }
+
+        }
+    })
+</script>
+
+
+<div class="containerAA16 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="840">
+            <div class="barraDataInit animated fadeInLeftBig delay2_0 itx" item=1>
+                <div class="barraDataContent animated fadeInLeftBig delay2_2 branco">
+                    <div class="livro mr30"></div>
+                    <div class="mt5 size24 itemDY">
+                        No momento, a abordagem diagnóstica da COVID-19 é do profissional de saúde (no hospital ou no ambulatório/consultório), ou do gestor de saúde para avaliar a população/grupo de risco
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="240">
+            <div class="branco">
+                <div class="size40 animated fadeInLeft delay0_4 bold">
+                    TIPOS DE TESTES LABORATORIAIS
+                </div>
+            </div>
+        </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="350" py="400">
+
+            <div class="animated fadeInUp delay0_8 size32 bold verde2 mb10">
+                IMUNOLÓGICO
+            </div>
+            <div class="animated fadeInUp delay1_2 verde2">
+                Ensaio Imunoenzimático (<span class="book_italic">Enzyme-Linked Immunosorbent Assay</span> – ELISA), Imunocromatografia (teste rápido), Imunoensaio por Quimioluminescência (CLIA)
+            </div>
+        </div>
+
+
+        <div class="aba posicionar animated fadeIn size30" px="350" py="530">
+            <div class="tabs animated fadeInUp delay1_2">
+                <div class="tabs__form">
+                    <div class="item item1" item=1>
+                        <label for="tabs1" class="tabs__label">O QUE É?</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Verifica a resposta imunológica ao vírus detectada pela presença de anticorpos IgM e IgC.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item2" item=2>
+                        <label for="tabs2" class="tabs__label">QUANDO É FEITO?</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                A partir da 2ª semana de doença, a quantidade de vírus diminui progressivamente e o indivíduo produz anticorpos contra o vírus, principalmente das classes IgG e IgM.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item3" item=3>
+                        <label for="tabs3" class="tabs__label">ONDE É FEITO?</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Sorologia tradicional é realizada em laboratório, com amostras de soro obtido após punção venosa. Os testes sorológicos estão disponíveis em Minas Gerais de acordo com solicitação médica ou ações das Secretarias de Saúde ou em testes rápidos (imunocromatográficos),
+                                realizados em sangue capilar obtido por punção digital.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item4" item=4>
+                        <label for="tabs4" class="tabs__label">PRINCIPAIS LIMITAÇÕES</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Preocupação quanto à indicação na fase aguda da infecção, pois detectam a infecção muito tardiamente no curso da doença (geralmente mais de 7 a 10 dias). Isso significa que o diagnóstico de COVID-19 baseado na detecção de anticorpos só será possível em
+                                uma fase de recuperação.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

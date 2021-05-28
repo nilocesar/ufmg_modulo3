@@ -1,0 +1,279 @@
+<script>
+    window["aa26"] = {
+        indice: "aa26",
+        status: false,
+        tema: 1,
+        exerc: 2
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa26").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            block();
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+                _containerTela.find(".posicionar").positionCSS({
+                    box: _containerTela.find('.containerGeral'),
+                    img_H: course.height,
+                    img_W: course.width
+                });
+
+                exercicio();
+
+
+            } else {
+
+            }
+
+            function block() {
+
+                var _exercCurrent = "ed" + _tela.tema + "_" + _tela.exerc;
+
+                if (course.scorm_get_suspendData(_exercCurrent)) {
+
+                    var _res = course.scorm_get_suspendData(_exercCurrent);
+                    var _item = JSON.parse(_res).item;
+
+                    var _comp = true;
+                    _containerTela.find('.item').each(function(indice, item) {
+
+                        if (_item[indice] == 1) {
+
+                            if ($(item).attr('res') == "0") {
+                                _comp = false;
+                            }
+
+                        } else {
+
+                            if ($(item).attr('res') == "1") {
+                                _comp = false;
+                            }
+                        }
+                    });
+
+                    if (_comp) {
+                        _containerTela.find(".feedPositivo").css('display', 'flex');
+                    } else {
+                        _containerTela.find(".feedNegativo").css('display', 'flex');
+                    }
+
+                } else {
+                    _containerTela.find('.item').removeClass('inativoX itemAtivo');
+                }
+
+            }
+
+            function exercicio() {
+
+
+                _containerTela.find('.item').on('click', function() {
+
+
+                    //_containerTela.find('.item').removeClass('itemAtivo');
+                    if ($(this).hasClass('itemAtivo')) {
+                        $(this).removeClass('itemAtivo');
+                    } else {
+                        $(this).addClass('itemAtivo');
+                    }
+
+                    var _comp = false;
+                    _containerTela.find('.item').each(function(indice, item) {
+
+                        if ($(item).hasClass('itemAtivo')) {
+                            _comp = true;
+                        }
+
+                    });
+
+                    if (_comp) {
+                        _containerTela.find('.btnConfirmar').css('display', 'flex');
+                    } else {
+                        _containerTela.find('.btnConfirmar').css('display', 'none');
+                    }
+
+
+
+                });
+
+
+                _containerTela.find('.btnConfirmar').on('click', function() {
+
+                    _containerTela.find('.btnConfirmar').css('display', 'none');
+
+                    // var _exercCurrent = "e" + _tela.tema + "_" + _tela.exerc;
+                    // course.scorm_set_suspendData(_exercCurrent, _res);
+                    // course.notaCurrent();
+
+                    var _exercEd = "ed" + _tela.tema + "_" + _tela.exerc;
+
+                    var _comp = [];
+                    var _res = true;
+                    _containerTela.find('.item').each(function(indice, item) {
+
+                        if ($(item).hasClass('itemAtivo')) {
+                            _comp.push(1);
+
+                            if ($(item).attr('res') == "0") {
+                                _res = false;
+                            }
+
+                        } else {
+                            _comp.push(0);
+
+                            if ($(item).attr('res') == "1") {
+                                _res = false;
+                            }
+                        }
+
+                    });
+
+
+                    var itemX = JSON.stringify({
+                        item: _comp
+                    });
+
+
+                    course.scorm_set_suspendData(_exercEd, itemX);
+
+                    if (_res) {
+                        _containerTela.find(".feedPositivo").css('display', 'flex');
+                    } else {
+                        _containerTela.find(".feedNegativo").css('display', 'flex');
+                    }
+
+
+                });
+
+
+                _containerTela.find(".fecharFeed").on("click", function() {
+
+                    _containerTela.find('.item').addClass('inativoX');
+                    _containerTela.find(".feed").css('display', 'none');
+
+                    var _exercEd = "ed" + _tela.tema + "_" + _tela.exerc;
+                    var _res = course.scorm_get_suspendData(_exercEd);
+                    var _item = JSON.parse(_res).item;
+
+                    _containerTela.find('.item').each(function(indice, item) {
+
+                        if (_item[indice] == 1) {
+                            $(item).addClass('itemAtivo');
+                        } else {
+                            $(item).removeClass('itemAtivo');
+                        }
+                    });
+
+                    course.liberarNavegacao();
+                });
+
+            }
+
+
+        }
+
+
+    })
+</script>
+
+
+<div class="containerAA26 containerAABase">
+    <div class="containerGeral">
+
+        <div class="titulo posicionar animated fadeIn" px="127" py="185">
+            <div class="txtx animated fadeInUp delay0_8 size40 light">
+                Responda a questão a seguir para testar seu conhecimento.
+            </div>
+        </div>
+
+        <div class="subtitulo posicionar animated fadeIn delay1_2" px="200" py="313">
+            <div class="number vermelho size60">2</div>
+            <div class="txtx size30">
+                Marque uma ou mais alternativas que contém uma medida correta para a gestão de riscos:
+            </div>
+        </div>
+
+
+        <div class="quiz posicionar animated fadeIn light size30" px="302" py="505">
+            <div class="item item1 animated fadeInUp delay1_2" item="1" res="1">
+                <div class="check"></div>
+                <div class="txtD">
+                    Reduzir ou diminuir o risco.
+                </div>
+            </div>
+            <div class="item item2 animated fadeInUp delay1_4" item="2" res="1">
+                <div class="check"></div>
+                <div class="txtD">
+                    Evitar o risco.
+                </div>
+            </div>
+            <div class="item item3 animated fadeInUp delay1_6" item="3" res="1">
+                <div class="check"></div>
+                <div class="txtD">
+                    Compartilhar o risco.
+                </div>
+            </div>
+            <div class="item item4 animated fadeInUp delay1_8" item="4" res="1">
+                <div class="check"></div>
+                <div class="txtD">
+                    Aceitar e monitorar o risco.
+                </div>
+            </div>
+        </div>
+
+        <div class="btnConfirmar posicionar size35" px="875" py="900">
+            <div class="btnX animated zoomIn delay0_2">
+                Confirmar
+            </div>
+        </div>
+
+        <div class="feed feedPositivo posicionar animated fadeIn delay0_2" px="0" py="0">
+
+            <div class="feedBase branco">
+
+                <div class="fecharFeed">
+                    <i class="fas fa-times size40"></i>
+                </div>
+
+                <div class="feedInt">
+                    <div class="tiX size60 bold">
+                        Parabéns, você acertou!
+                    </div>
+
+                    <div class="size40 mt50 light">
+                        Todas as atividades de uma organização envolvem algum tipo de risco, que requerem alguma ação de eliminação, redução ou monitoramento. Esse processo é chamado de: gestão de riscos.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="feed feedNegativo posicionar animated fadeIn delay0_2" px="0" py="0">
+
+            <div class="feedBase branco">
+                <div class="fecharFeed">
+                    <i class="fas fa-times size40"></i>
+                </div>
+
+                <div class="feedInt">
+                    <div class="tiX size60 bold">
+                        Você não selecionou a resposta correta!
+                    </div>
+
+                    <div class="size40 mt50 light">
+                        Todas as atividades de uma organização envolvem algum tipo de risco, que requerem alguma ação de eliminação, redução ou monitoramento. Esse processo é chamado de: gestão de riscos.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

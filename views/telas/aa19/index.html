@@ -1,0 +1,177 @@
+<script>
+    window["aa19"] = {
+        indice: "aa19",
+        status: false,
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa19").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            _containerTela.find(".feedX").css('display', 'none');
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                controle();
+
+            } else {
+
+            }
+
+            function controle() {
+
+                _containerTela.find(".feedX").css('display', 'none');
+
+                var _item = null;
+                _containerTela.find(".itx").on('click', function() {
+
+                    $(this).attr('ativo', '1')
+
+                    _item = $(this).attr('item');
+                    _containerTela.find(".feed" + _item).css('display', 'flex');
+                });
+
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+
+                    if (_item == 1)
+                        window["aa6"].player1.pauseVideo();
+
+                    var _comp = true;
+                    _containerTela.find(".itx").each(function(indice, item) {
+
+                        if (!$(item).attr('ativo')) {
+                            _comp = false;
+                        }
+                    })
+
+                    if (_comp)
+                        course.liberarNavegacao();
+
+                });
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA19 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="792">
+            <div class="barraDataInit animated fadeInLeftBig delay0_6 itx" item=1>
+                <div class="barraDataContent animated fadeInLeftBig delay1_0 branco">
+                    <div class="livro mr30"></div>
+                    <div>
+                        <div class="tituDa bold size32">
+                            SAIBA MAIS
+                        </div>
+                        <div class="mt5 size26 itemDY">
+                            Orientações para manejo de pacientes com COVID-19
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tit posicionar animated fadeIn" px="350" py="255">
+            <div class="branco">
+                <div class="size42 animated fadeInLeft delay0_4 bold">
+                    AUMENTO DO RISCO DE DOENÇA GRAVE
+                </div>
+            </div>
+        </div>
+
+        <div class="bloco posicionar animated fadeIn delay0_8 size27" px="325" py="375">
+
+            <div>
+                Condições e fatores de risco a serem considerados para possíveis complicações da síndrome gripal:
+            </div>
+            <div class="list">
+                <div>
+                    <ul>
+                        <li>
+                            Idade igual ou superior a 60 anos
+                        </li>
+                        <li>
+                            Miocardiopatias de diferentes etiologias (insuficiência cardíaca, miocardiopatia<br> isquêmica etc.)
+                        </li>
+                        <li>
+                            Hipertensão
+                        </li>
+                        <li>
+                            Pneumopatias graves ou descompensadas <br>(asma moderada/grave, DPOC)
+                        </li>
+                        <li>
+                            Tabagismo
+                        </li>
+                        <li>
+                            Obesidade
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>
+                            Imunodepressão
+                        </li>
+                        <li>
+                            MiocaDoenças renais crônicas em estágio avançado (graus 3, 4 e 5)
+                        </li>
+                        <li>
+                            Diabetes <span class="book_italic">mellitus</span>, conforme juízo clínico
+                        </li>
+                        <li>
+                            Doenças cromossômicas com estado de fragilidade imunológica
+                        </li>
+                        <li>
+                            Neoplasia maligna
+                        </li>
+                        <li>
+                            Gestação de alto risco
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="feedX feed1 feedPDF animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <iframe src="anexos/leituraComplementar5/index.html" frameborder="0"></iframe>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

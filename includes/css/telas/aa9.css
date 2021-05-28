@@ -1,0 +1,147 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA9 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                                background-size: cover; */
+}
+
+.containerAA9 .baseFundo {
+    background: url(../../img/aa9.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+                            
+                            Main Components 
+                            
+                            -------------------------------- */
+
+.containerAA9 .tit {
+    position: absolute;
+    width: 837px;
+    overflow: hidden;
+}
+
+.containerAA9 .bloco {
+    position: absolute;
+    width: 1311px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA9 .bloco .imgX {
+    position: relative;
+    width: 731px;
+    height: 432px;
+    background: url(../../img/img1AA9.png) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA9 .bloco .txtX {
+    position: relative;
+    width: 520px;
+    padding: 20px;
+}
+
+.containerAA9 .barraData {
+    position: absolute;
+    width: 1270px;
+    height: 149px;
+    overflow: hidden;
+}
+
+.containerAA9 .barraDataInit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FEC86E;
+    border-top-right-radius: 200px;
+}
+
+.containerAA9 .barraDataContent {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    background: #F48C0F;
+    border-top-right-radius: 200px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 50px;
+}
+
+.containerAA9 .livro {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/livro.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA9 .baseFundoFeed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    /* border: 5px solid #33649E; */
+    background-color: rgba(35, 34, 34, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.containerAA9 .content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.containerAA9 .closeX {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.containerAA9 .closeX:hover {
+    color: #33649E;
+}
+
+.containerAA9 .content .ytplayer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.containerAA9 .feedPDF iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.containerAA9 .itemDY {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,334 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA4 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                        background-size: cover; */
+}
+
+.containerAA4 .baseFundo {
+    background: url(../../img/aa4.png) no-repeat center;
+    background-size: cover;
+    /* background-color: #fff; */
+}
+
+
+/* -------------------------------- 
+                    
+                    Main Components 
+                    
+                    -------------------------------- */
+
+.containerAA4 .titulo {
+    position: absolute;
+    width: 602px;
+}
+
+.containerAA4 .grafic {
+    position: absolute;
+    width: 1215px;
+    height: 460px;
+    background: url(../../img/grafic.png) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA4 a {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+.containerAA4 .lista {
+    position: absolute;
+    width: 1200px;
+}
+
+.containerAA4 .item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-bottom: 20px;
+}
+
+.containerAA4 .point {
+    position: relative;
+    width: 5%;
+    font-size: 100px;
+    line-height: 40px;
+}
+
+.containerAA4 .text {
+    position: relative;
+    width: 95%;
+}
+
+.containerAA4 .barraData {
+    position: absolute;
+    width: 1270px;
+    height: 149px;
+    overflow: hidden;
+}
+
+.containerAA4 .barraDataInit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #6BADE8;
+    border-top-left-radius: 200px;
+}
+
+.containerAA4 .barraDataContent {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    background: #4988CD;
+    border-top-left-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10%;
+}
+
+.containerAA4 .livro {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/livro.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA4 .titulo {
+    position: absolute;
+    width: 687px;
+}
+
+.containerAA4 .baseFundoFeed {
+    position: absolute;
+    width: 1328px;
+    height: 747px;
+    border: 5px solid #33649E;
+    background-color: rgba(35, 34, 34, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.containerAA4 .content {
+    position: relative;
+    width: 1055px;
+    height: 580px;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.containerAA4 .feedPDF .baseFundoFeed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    border: 5px solid rgba(51, 100, 158, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA4 .feedPDF .content {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.containerAA4 .feedPDF iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.containerAA4 .feedPositivo .content {
+    background-color: #40B865;
+    width: 800px;
+    height: 480px;
+}
+
+.containerAA4 .closeX {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.containerAA4 .closeX:hover {
+    color: #33649E;
+}
+
+.containerAA4 .itx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA4 .txtSA {
+    padding: 20px;
+}
+
+.containerAA4 .itemDY {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+.containerAA4 .balao {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #A7A9AC;
+    border-radius: 20px;
+    width: 420px;
+}
+
+.containerAA4 .balao2 {
+    width: 320px;
+}
+
+.containerAA4 .balao3 {
+    width: 320px;
+}
+
+.containerAA4 .balao4 {
+    width: 320px;
+}
+
+.containerAA4 .balao5 {
+    width: 320px;
+}
+
+.containerAA4 .balao .titB {
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    background-color: #E25F37;
+    color: #fff;
+    font-family: 'bold';
+    font-size: 24px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.containerAA4 .balao2 .titB {
+    background-color: #E88400;
+}
+
+.containerAA4 .balao3 .titB {
+    background-color: #008743;
+}
+
+.containerAA4 .balao4 .titB {
+    background-color: #1173BC;
+}
+
+.containerAA4 .balao5 .titB {
+    background-color: #9A02B5;
+}
+
+.containerAA4 .textB {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.containerAA4 .balao:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 64%;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-top-color: #E25F37;
+    border-bottom: 0;
+    margin-left: -27px;
+    margin-bottom: -27px;
+}
+
+.containerAA4 .balao2:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-bottom-color: #E88400;
+    border-top: 0;
+    margin-left: -27px;
+    margin-top: -23px;
+}
+
+.containerAA4 .balao3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 54%;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-top-color: #008743;
+    border-bottom: 0;
+    margin-left: -27px;
+    margin-bottom: -27px;
+}
+
+.containerAA4 .balao4:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-bottom-color: #1173BC;
+    border-top: 0;
+    margin-left: -27px;
+    margin-top: -23px;
+}
+
+.containerAA4 .balao5:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 54%;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-top-color: #9A02B5;
+    border-bottom: 0;
+    margin-left: -27px;
+    margin-bottom: -27px;
+}

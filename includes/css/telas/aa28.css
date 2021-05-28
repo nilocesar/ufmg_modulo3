@@ -1,0 +1,219 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA28 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                            background-size: cover; */
+}
+
+.containerAA28 .baseFundoX {
+    background: url(../../img/aa26.png) no-repeat center;
+    background-size: contain;
+    /* background-color: #fff; */
+}
+
+
+/* -------------------------------- 
+                        
+                        Main Components 
+                        
+                        -------------------------------- */
+
+.containerAA28 .titulo {
+    position: absolute;
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.containerAA28 .subtitulo {
+    position: absolute;
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.containerAA28 .subtitulo .number {
+    padding-right: 20px;
+    border-right: 5px solid #ED1C24;
+}
+
+.containerAA28 .icox {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: url(../../img/icoExcercicio.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA28 .txtx {
+    position: relative;
+    width: 1450px;
+    padding: 30px;
+}
+
+.containerAA28 .lineBase {
+    position: absolute;
+    width: 88px;
+}
+
+.containerAA28 .lineBase div {
+    position: relative;
+    width: 100%;
+    border: 3px solid #005aab;
+}
+
+.containerAA28 .quiz {
+    position: absolute;
+    width: 1500px;
+}
+
+.containerAA28 .item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.containerAA28 .check {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: #A7A9AC; */
+    border: 1px solid #A7A9AC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.containerAA28 .item:hover .check::after {
+    position: relative;
+    content: "";
+    background-color: #ED1C24;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.containerAA28 .itemAtivo .check:after {
+    position: relative;
+    content: "";
+    background-color: #ED1C24;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.containerAA28 .inativoX {
+    pointer-events: none;
+}
+
+.containerAA28 .txtD {
+    position: relative;
+    width: 1450px;
+    padding-left: 20px;
+}
+
+.containerAA28 .btnConfirmar {
+    position: absolute;
+    width: 240px;
+    height: 66px;
+    display: none;
+}
+
+.containerAA28 .btnX {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #ED1C24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ED1C24;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.containerAA28 .btnX:hover {
+    background-color: #ED1C24;
+    color: #fff;
+}
+
+.containerAA28 .feed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0, 0, 0, 0.776);
+    z-index: 99999999999999999999999999999999999999999;
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.containerAA28 .feedPositivo .feedBase {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/feedPositivo.png) no-repeat center;
+    background-size: cover;
+}
+
+.containerAA28 .feedNegativo .feedBase {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/feedNegativo.png) no-repeat center;
+    background-size: cover;
+}
+
+.containerAA28 .feedInt {
+    position: absolute;
+    width: 900px;
+    top: 276px;
+    left: 202px;
+}
+
+.containerAA28 .subInfo {
+    position: relative;
+    margin-top: 200px;
+}
+
+.containerAA28 .fecharFeed {
+    position: absolute;
+    border: 3px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    width: 51px;
+    height: 51px;
+    top: 100px;
+    right: 100px;
+    z-index: 9999999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA28 .fecharFeed:hover {
+    background-color: #fff;
+    color: #ED1C24;
+}

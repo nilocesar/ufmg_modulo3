@@ -1,0 +1,151 @@
+<script>
+    window["aa14"] = {
+        indice: "aa14",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa14").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            reset();
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                control()
+
+
+            } else {
+
+            }
+
+            function control() {
+                _containerTela.find(".item .tabs__label").on('click', function() {
+
+                    var _parent = $(this).parent();
+                    var _item = parseInt(_parent.attr('item'));
+
+                    _parent.attr('ativo', 1);
+
+                    _containerTela.find(".item .tabs__label").removeClass('tabs__labelAtivo');
+                    _containerTela.find(".item .tabs__content").removeClass('tabs__contentAtivo');
+
+                    _containerTela.find(".item" + _item + " .tabs__label").addClass('tabs__labelAtivo');
+                    _containerTela.find(".item" + _item + " .tabs__content").addClass('tabs__contentAtivo');
+
+                    var comp = true;
+                    _containerTela.find(".item").each(function(indice, item) {
+
+                        if (!$(item).attr('ativo'))
+                            comp = false;
+
+                    });
+
+                    if (comp) {
+                        course.liberarNavegacao();
+                    }
+
+                });
+            }
+
+            function reset() {
+
+                _containerTela.find(".item .tabs__label").removeClass('tabs__labelAtivo');
+                _containerTela.find(".item .tabs__content").removeClass('tabs__contentAtivo');
+                _containerTela.find(".item1 .tabs__label").addClass('tabs__labelAtivo');
+                _containerTela.find(".item1 .tabs__content").addClass('tabs__contentAtivo');
+                _containerTela.find(".item1").attr('ativo', 1);
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA14 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="240">
+            <div class="branco">
+                <div class="size40 animated fadeInLeft delay0_4 bold">
+                    TIPOS DE TESTES LABORATORIAIS
+                </div>
+            </div>
+        </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="350" py="400">
+
+            <div class="animated fadeInUp delay0_8 size32 bold verde2 mb10">
+                TESTE DE BIOLOGIA MOLECULAR (RT-PCR)
+            </div>
+            <div class="animated fadeInUp delay1_0">
+                Permite identificar o RNA do vírus em amostras coletadas da nasofaringe até o 8º dia de início dos sintomas. A amostra deve ser coletada, de preferência, entre o 3º e o 7º dia do início dos sintomas. É considerado o padrão-ouro no diagnóstico da COVID-19.
+            </div>
+
+        </div>
+
+
+        <div class="aba posicionar animated fadeIn size30" px="350" py="580">
+            <div class="tabs animated fadeInUp delay1_2">
+                <div class="tabs__form">
+                    <div class="item item1" item=1>
+                        <label for="tabs1" class="tabs__label">O QUE É?</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Busca detectar o RNA do vírus através da amplificação do ácido nucleico pela reação em cadeia da polimerase. É o teste “padrão-ouro” ou “padrão referência” para diagnóstico de COVID-19.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item2" item=2>
+                        <label for="tabs2" class="tabs__label">QUANDO É FEITO?</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Sabe-se que um indivíduo infectado possui grande quantidade do vírus SARS-CoV-2 especialmente na 1ª semana após o contágio. Por isso, este é o melhor momento para este teste.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item3" item=3>
+                        <label for="tabs3" class="tabs__label">ONDE É FEITO?</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Em unidades hospitalares, através da coleta de secreções do fundo do nariz (nasofaringe) e da garganta (orofaringe).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item4" item=4>
+                        <label for="tabs4" class="tabs__label">PRINCIPAIS LIMITAÇÕES</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Pode ter resultados pouco precisos quando realizado muito precocemente após o contato suspeito ou quando a amostra é coletada após o desaparecimento do vírus (mais de 3 semanas após os primeiros sinais da doença).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

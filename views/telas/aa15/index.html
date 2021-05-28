@@ -1,0 +1,112 @@
+<script>
+    window["aa15"] = {
+        indice: "aa15",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa15").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            reset();
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                control()
+
+
+            } else {
+
+            }
+
+            function control() {
+                _containerTela.find(".item .tabs__label").on('click', function() {
+
+                    var _parent = $(this).parent();
+                    var _item = parseInt(_parent.attr('item'));
+
+                    _parent.attr('ativo', 1);
+
+                    _containerTela.find(".item .tabs__label").removeClass('tabs__labelAtivo');
+                    _containerTela.find(".item .tabs__content").removeClass('tabs__contentAtivo');
+
+                    _containerTela.find(".item" + _item + " .tabs__label").addClass('tabs__labelAtivo');
+                    _containerTela.find(".item" + _item + " .tabs__content").addClass('tabs__contentAtivo');
+
+                    var comp = true;
+                    _containerTela.find(".item").each(function(indice, item) {
+
+                        if (!$(item).attr('ativo'))
+                            comp = false;
+
+                    });
+
+                    if (comp) {
+                        course.liberarNavegacao();
+                    }
+
+                });
+            }
+
+            function reset() {
+
+                _containerTela.find(".item .tabs__label").removeClass('tabs__labelAtivo');
+                _containerTela.find(".item .tabs__content").removeClass('tabs__contentAtivo');
+                _containerTela.find(".item1 .tabs__label").addClass('tabs__labelAtivo');
+                _containerTela.find(".item1 .tabs__content").addClass('tabs__contentAtivo');
+                _containerTela.find(".item1").attr('ativo', 1);
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA15 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="240">
+            <div class="branco">
+                <div class="size40 animated fadeInLeft delay0_4 bold">
+                    TIPOS DE TESTES LABORATORIAIS
+                </div>
+            </div>
+        </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="350" py="470">
+
+            <div class="animated fadeInUp delay0_8 size32 bold verde2 mb20">
+                IMUNOLÓGICO
+            </div>
+            <div class="animated fadeInUp delay1_2 verde2 mb20">
+                Ensaio Imunoenzimático (<span class="book_italic">Enzyme-Linked Immunosorbent Assay</span> – ELISA), Imunocromatografia (teste rápido), Imunoensaio por Quimioluminescência (CLIA)
+            </div>
+            <div class="animated fadeInUp delay1_0">
+                Os testes sorológicos de detecção de anticorpos IgM, IgA e/ou IgG verificam a resposta imunológica do indivíduo em relação ao vírus SARS-CoV-2, podendo diagnosticar doença ativa ou pregressa, por isso são indicados a partir do 8º dia do início dos sintomas.
+                Mesmo validados, é importante saber que os testes rápidos apresentam importantes limitações e a principal delas é que precisa ser realizado, de forma geral, a partir do 8º dia do início dos sintomas.
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>

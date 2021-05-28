@@ -1,0 +1,163 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA16 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                                                    background-size: cover; */
+}
+
+.containerAA16 .baseFundo {
+    background: url(../../img/aa15.png) no-repeat center;
+    background-size: cover;
+}
+
+
+/* -------------------------------- 
+                                                
+                                                Main Components 
+                                                
+                                                -------------------------------- */
+
+.containerAA16 .tit {
+    position: absolute;
+    width: 1137px;
+    overflow: hidden;
+}
+
+.containerAA16 .barraData {
+    position: absolute;
+    width: 1270px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.containerAA16 .barraDataInit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #6FEC83;
+    border-top-right-radius: 200px;
+}
+
+.containerAA16 .barraDataContent {
+    position: relative;
+    width: 95%;
+    height: 100%;
+    background: #30BF58;
+    border-top-right-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA16 .livro {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/info.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA16 .itemDY {
+    width: 85%;
+}
+
+.containerAA16 .lista {
+    position: absolute;
+    width: 1160px;
+}
+
+.containerAA16 ul {
+    list-style: disc;
+    padding: 30px;
+}
+
+.containerAA16 .aba {
+    position: absolute;
+    width: 1160px;
+}
+
+.containerAA16 .tabs {
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    perspective: 1000px;
+}
+
+.containerAA16 .tabs__form {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+    position: relative;
+}
+
+.containerAA16 .tabs__label {
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* flex: 1; */
+    padding: 10px 35px;
+    cursor: pointer;
+    color: #21A540;
+    background-color: #fff;
+    border-top: 2px solid #21A540;
+    border-left: 2px solid #21A540;
+    border-right: 2px solid #21A540;
+    border-radius: 10px 10px 0px 0px;
+    font-size: 28px;
+}
+
+.containerAA16 .tabs__label:hover {
+    color: #fff;
+    background-color: #30bf58;
+}
+
+.containerAA16 .tabs__labelAtivo {
+    color: #fff !important;
+    background-color: #30bf58 !important;
+}
+
+.containerAA16 .tabs__labelAtivo::before {
+    position: absolute;
+    content: "";
+    width: 90%;
+    bottom: 0;
+    left: 50%;
+    margin-left: -45%;
+    border-top: 2px solid #fff;
+}
+
+.containerAA16 .tabs__content {
+    position: absolute;
+    width: 100%;
+    height: 240px;
+    z-index: -1;
+    top: 50px;
+    left: 0;
+    text-align: left;
+    padding: 20px;
+    transition: opacity 1s, transform 2s;
+    background: #30bf58;
+    color: #fff;
+    font-size: 25px;
+    box-shadow: 0px 20px 59px 5px rgba(0, 0, 0, 0.15);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA16 .tabs__contentAtivo {
+    display: flex;
+}

@@ -1,0 +1,138 @@
+<script>
+    window["aa4"] = {
+        indice: "aa4",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa4").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                _containerTela.find(".feedX").css('display', 'none');
+                _containerTela.find(".itemDY").on('click', function() {
+                    _containerTela.find(".feedPDF").css('display', 'flex');
+                });
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+                    course.liberarNavegacao();
+                })
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA4 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay2_4" px="350" py="791">
+            <div class="barraDataInit animated fadeInRightBig delay2_8">
+                <div class="barraDataContent animated fadeInRightBig delay3_0 branco">
+                    <div class="livro mr30"></div>
+                    <div>
+                        <div class="tituDa bold size32">
+                            LEITURA COMPLEMENTAR 1
+                        </div>
+                        <div class="mt5 size26 itemDY">
+                            Boletim Epidemiológico 4 - Secretaria de Vigilância em Saúde
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lista posicionar animated fadeIn size30" px="1034" py="242">
+            <div class="animated fadeInUp delay0_4 size48 bold branco">
+                A PANDEMIA COVID-19
+            </div>
+        </div>
+
+        <div class="grafic posicionar animated fadeIn delay1_0" px="357" py="330">
+
+            <div class="balao balao1 animated fadeInDown delay1_4" style="top:20px;left: -30px;">
+                <div class="titB">
+                    31/12/2019
+                </div>
+                <div class="textB">
+                    Notificação à OMS de casos de pneumonia de etiologia desconhecida na cidade de Wuhan, província de Hubei, na China
+                </div>
+            </div>
+
+            <div class="balao balao2 animated fadeInUp delay1_6" style="top:285px;left: 303px;">
+                <div class="titB">
+                    07/01/2020
+                </div>
+                <div class="textB">
+                    Autoridades chinesas informam que a causa das pneumonias é um novo tipo de coronavírus
+                </div>
+            </div>
+
+            <div class="balao balao3 animated fadeInDown delay1_8" style="top:20px;left: 420px;">
+                <div class="titB">
+                    30/01/2020
+                </div>
+                <div class="textB">
+                    A OMS declara emergência <br>de saúde pública de<br> importância internacional
+                </div>
+            </div>
+
+            <div class="balao balao4 animated fadeInUp delay2_0" style="top:285px;left: 773px;">
+                <div class="titB">
+                    11/03/2020
+                </div>
+                <div class="textB">
+                    A OMS caracteriza <br>a doença como<br> uma pandemia
+                </div>
+            </div>
+
+
+            <div class="balao balao5 animated fadeInDown delay2_2" style="top:20px;left: 885px;">
+                <div class="titB">
+                    20/03/2020
+                </div>
+                <div class="textB">
+                    Declarada a transmissão comunitária em todo <br>o Brasil da COVID-19
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="feedX feedPDF animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <iframe src="anexos/leituraComplementar1/index.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

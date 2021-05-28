@@ -1,0 +1,107 @@
+<script>
+    window["aa3"] = {
+        indice: "aa3",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa3").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA3 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="titulo posicionar animated fadeIn" px="868" py="285">
+            <div class="animated fadeInUp delay0_6 up size35 bold azul1">
+                O QUE VAMOS ESTUDAR NESTE MÓDULO:
+            </div>
+            <div class="size26 mt30 list">
+                <div class="item animated fadeInUp delay0_8">
+                    <div class="icoX">
+                        <i class="fas fa-check size40 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Vias de Transmissão
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay1_0">
+                    <div class="icoX">
+                        <i class="fas fa-check size40 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Período de incubação
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay1_2">
+                    <div class="icoX">
+                        <i class="fas fa-check size40 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Sintomas mais comuns
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay1_4">
+                    <div class="icoX">
+                        <i class="fas fa-check size40 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Sintomas graves
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay1_6">
+                    <div class="icoX">
+                        <i class="fas fa-check size40 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Tipos de testes
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay1_8">
+                    <div class="icoX">
+                        <i class="fas fa-check size40 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Casos suspeitos e confirmados
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay2_0">
+                    <div class="icoX">
+                        <i class="fas fa-check size40 azul1"></i>
+                    </div>
+                    <div class="txtX">
+                        Vacinas
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

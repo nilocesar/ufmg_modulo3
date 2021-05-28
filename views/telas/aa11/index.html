@@ -1,0 +1,147 @@
+<script>
+    window["aa11"] = {
+        indice: "aa11",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa11").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+                _containerTela.sanfona_horizontal();
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA11 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="250">
+            <div class="branco">
+                <div class="size48 animated fadeInLeft delay0_4 bold">
+                    SINTOMAS
+                </div>
+            </div>
+        </div>
+
+        <div class="imagem posicionar animated fadeIn delay1_2" px="425" py="484">
+
+        </div>
+
+        <div class="list posicionar animated fadeIn" px="320" py="378">
+            <ul>
+                <li class="animated fadeInUp delay0_8">
+                    A doença pode começar com uma febre, seguida de uma tosse seca e, após uma semana, leva à falta de ar. Esses sintomas podem se agravar, provocando a necessidade de tratamento hospitalar
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="blockT posicionar animated fadeIn delay1_2 size26" px="1173" py="460">
+            Clique nas abas:
+        </div>
+
+        <div class="bloco posicionar animated fadeIn delay1_4" px="1173" py="500">
+            <div class="flexbox-slider">
+
+                <div class="flexbox-slide activeSlide" comp=1>
+                    <!-- <div class="fundoColor"></div> -->
+
+                    <div class="text-tab azul">
+                        <span class="bold size22">
+                            SINTOMAS MAIS COMUNS
+                        </span>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+
+
+                    <div class="textSlide branco size25">
+                        <ul>
+                            <li>
+                                Febre
+                            </li>
+                            <li>
+                                Tosse
+                            </li>
+                            <li>
+                                Dificuldade para respirar
+                            </li>
+                            <li>
+                                Perda do olfato (anosmia)
+                            </li>
+                            <li>
+                                Perda do paladar (disgeusia)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flexbox-slide">
+                    <!-- <div class="fundoColor"></div> -->
+
+                    <div class="text-tab azul">
+                        <span class="bold size22">
+                            OUTROS SINTOMAS
+                        </span>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+
+                    <div class="textSlide branco size25">
+                        <ul>
+                            <li>
+                                Dor de garganta
+                            </li>
+                            <li>
+                                Secreção ou congestão nasal
+                            </li>
+                            <li>
+                                Dores no corpo
+                            </li>
+                            <li>
+                                Dor de cabeça
+                            </li>
+                            <li>
+                                Fadiga
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+</div>

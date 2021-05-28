@@ -1,0 +1,56 @@
+<script>
+    window["aa24"] = {
+        indice: "aa24",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa24").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA24 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="titulo posicionar animated fadeIn" px="372" py="250">
+            <div class="animated fadeInUp delay0_6 up size48 bold branco">
+                VACINAS
+            </div>
+        </div>
+
+        <div class="list posicionar animated fadeIn" px="372" py="420">
+            <div class="animated fadeInUp delay0_8">
+                Após a aprovação do uso emergencial pela Agência Nacional de Vigilância Sanitária (Anvisa), a enfermeira Mônica Calazans, de 54 anos, foi a primeira pessoa a ser vacinada contra a COVID-19 no Brasil. Ela recebeu a vacina Coronavac, desenvolvida no país
+                pelo Instituto Butantan, no Hospital das Clínicas de São Paulo, no domingo, 17 de janeiro de 2021.
+            </div>
+        </div>
+
+    </div>
+
+</div>

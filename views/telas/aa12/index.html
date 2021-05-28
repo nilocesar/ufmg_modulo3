@@ -1,0 +1,109 @@
+<script>
+    window["aa12"] = {
+        indice: "aa12",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa12").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+                nav();
+
+            } else {
+
+            }
+
+            function nav() {
+
+
+
+                var section = _containerTela.find(".flexbox-slide");
+
+                function toggleAccordion() {
+
+                    section.removeClass('activeSlide');
+                    $(this).addClass('activeSlide');
+                    $(this).attr('comp', 1);
+
+                    var _comp = true;
+                    section.each(function(indice, item) {
+                        if (!$(item).attr('comp'))
+                            _comp = false;
+                    });
+
+                    if (_comp) {
+                        course.liberarNavegacao();
+                    }
+                }
+
+                section.on('click', toggleAccordion);
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA12 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="250">
+            <div class="branco">
+                <div class="size48 animated fadeInLeft delay0_4 bold">
+                    SINTOMAS
+                </div>
+            </div>
+        </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="350" py="400">
+
+            <div class="item animated fadeInUp delay0_8">
+                A infecção pelo SARS-CoV-2 apresenta vários tipos de quadros clínicos. Existem casos assintomáticos e casos com manifestações clínicas leves. Existem também quadros de insuficiência respiratória, choque e disfunção de múltiplos órgãos.
+            </div>
+
+            <div class="list mt30">
+                <div class="itemX animated fadeIn delay1_4">
+                    <span class="bold laranja3">Sinais de agravamento:</span><br>
+                    <ul class="list-style: disc;">
+                        <li>
+                            Dispneia
+                        </li>
+                        <li>
+                            Hipoxemia
+                        </li>
+                    </ul>
+
+                    Essa situação pode levar à <span class="bold">hospitalização</span> do paciente.
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>

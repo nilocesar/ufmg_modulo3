@@ -1,0 +1,98 @@
+<script>
+    window["aa7"] = {
+        indice: "aa7",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa7").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                controle();
+
+            } else {
+
+            }
+
+            function controle() {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA7 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="865">
+            <div class="barraDataInit animated fadeInLeftBig delay0_6 itx" item=2>
+                <div class="barraDataContent animated fadeInLeftBig delay1_0 branco">
+                    <div>
+
+
+                        <div class="size26 bold">
+                            Veja os número do Brasil <i class="fas fa-arrow-right"></i> <a class="branco" href="https://covid.saude.gov.br" target="_blank" rel="nofollow">covid.saude.gov.br</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subt1 size26 bold laranja2 posicionar animated fadeIn delay1_4" px="357" py="825">
+            Para ver os dados mundiais atualizados, acesse: John Hopskins (<a class="laranja2" href="https://coronavirus.jhu.edu" target="_blank" rel="nofollow">coronavirus.jhu.edu</a>)
+        </div>
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="230">
+            <div class="branco">
+                <div class="size40 animated fadeInLeft delay0_4 bold">
+                    QUANTOS CASOS DE COVID-19<br> JÁ FORAM IDENTIFICADOS NO MUNDO EM 22/05/21?
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="bloco posicionar animated fadeIn delay0_8" px="405" py="295">
+
+            <div class="step step1 animated fadeIn delay0_2">
+
+                <div class="text azul1 bold size42 right">
+                    Afinal, como surgiu<br> o SARS-CoV-2?
+                </div>
+
+                <div class="pc itx" item=1>
+                    <div class="placeholder">
+                        <i class="far fa-play-circle"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> -->
+
+
+
+
+    </div>
+
+</div>

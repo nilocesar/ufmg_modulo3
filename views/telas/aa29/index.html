@@ -1,0 +1,211 @@
+<script>
+    window["aa29"] = {
+        indice: "aa29",
+        status: false,
+        tema: 1,
+        exerc: 5
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa29").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            block();
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+                _containerTela.find(".posicionar").positionCSS({
+                    box: _containerTela.find('.containerGeral'),
+                    img_H: course.height,
+                    img_W: course.width
+                });
+
+                exercicio();
+
+
+            } else {
+
+            }
+
+            function block() {
+
+                var _exercCurrent = "e" + _tela.tema + "_" + _tela.exerc;
+
+                if (course.scorm_get_suspendData(_exercCurrent)) {
+
+                    course.notaCurrent();
+
+                    var _res = course.scorm_get_suspendData(_exercCurrent);
+
+                    if (_res == 1) {
+                        _containerTela.find(".feedPositivo").css('display', 'flex');
+                    } else {
+                        _containerTela.find(".feedNegativo").css('display', 'flex');
+                    }
+
+                } else {
+                    _containerTela.find('.item').removeClass('inativoX itemAtivo');
+                }
+
+            }
+
+            function exercicio() {
+
+                var _item = 0;
+                var _res = 0;
+
+                _containerTela.find('.item').on('click', function() {
+
+                    _item = $(this).attr('item');
+                    _res = $(this).attr('res');
+
+                    _containerTela.find('.item').removeClass('itemAtivo');
+                    $(this).addClass('itemAtivo');
+
+                    _containerTela.find('.btnConfirmar').css('display', 'flex');
+
+                });
+
+
+                _containerTela.find('.btnConfirmar').on('click', function() {
+
+                    _containerTela.find('.btnConfirmar').css('display', 'none');
+
+                    var _exercCurrent = "e" + _tela.tema + "_" + _tela.exerc;
+                    course.scorm_set_suspendData(_exercCurrent, _res);
+                    course.notaCurrent();
+
+                    var _exercEd = "ed" + _tela.tema + "_" + _tela.exerc;
+                    course.scorm_set_suspendData(_exercEd, _item);
+
+                    if (_res == "1") {
+                        _containerTela.find(".feedPositivo").css('display', 'flex');
+                    } else {
+                        _containerTela.find(".feedNegativo").css('display', 'flex');
+                    }
+
+
+                });
+
+
+                _containerTela.find(".fecharFeed").on("click", function() {
+
+                    _containerTela.find('.item').addClass('inativoX');
+                    _containerTela.find(".feed").css('display', 'none');
+
+                    var _exercEd = "ed" + _tela.tema + "_" + _tela.exerc;
+                    var _item = course.scorm_get_suspendData(_exercEd);
+
+                    _containerTela.find('.item').each(function(indice, item) {
+                        if ($(item).attr('item') == _item) {
+                            $(item).addClass('itemAtivo');
+                        }
+                    });
+
+                    course.liberarNavegacao();
+                });
+
+            }
+
+
+        }
+
+
+    })
+</script>
+
+
+<div class="containerAA29 containerAABase">
+    <div class="containerGeral">
+
+        <div class="titulo posicionar animated fadeIn" px="127" py="185">
+            <div class="txtx animated fadeInUp delay0_8 size40 light">
+                Responda a questão a seguir para testar seu conhecimento.
+            </div>
+        </div>
+
+        <div class="subtitulo posicionar animated fadeIn delay1_2" px="150" py="313">
+            <div class="number vermelho size60">5</div>
+            <div class="txtx size30">
+                Leia a afirmativa e marque verdadeiro ou falso.
+            </div>
+        </div>
+
+        <div class="subtituloX posicionar animated fadeIn delay1_2" px="255" py="370">
+            <div class="txtx size30">
+                Controles compensatórios são meios que permitem a realização de análise de risco de uma companhia.
+            </div>
+        </div>
+
+
+        <div class="quiz posicionar animated fadeIn light size30" px="302" py="500">
+            <div class="item item1 animated fadeInUp delay1_2" item="1" res="0">
+                <div class="check"></div>
+                <div class="txtD">
+                    Verdadeiro.
+                </div>
+            </div>
+            <div class="item item2 animated fadeInUp delay1_4" item="2" res="1">
+                <div class="check"></div>
+                <div class="txtD">
+                    Falso.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="btnConfirmar posicionar size35" px="875" py="900">
+            <div class="btnX animated zoomIn delay0_2">
+                Confirmar
+            </div>
+        </div>
+
+        <div class="feed feedPositivo posicionar animated fadeIn delay0_2" px="0" py="0">
+
+            <div class="feedBase branco">
+
+                <div class="fecharFeed">
+                    <i class="fas fa-times size40"></i>
+                </div>
+
+                <div class="feedInt">
+                    <div class="tiX size60 bold">
+                        Parabéns, você acertou!
+                    </div>
+
+                    <div class="size40 mt50 light">
+                        Controles compensatórios são meios adotados para prevenir, identificar ou reduzir o impacto de ocorrência de riscos de acessos.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="feed feedNegativo posicionar animated fadeIn delay0_2" px="0" py="0">
+
+            <div class="feedBase branco">
+                <div class="fecharFeed">
+                    <i class="fas fa-times size40"></i>
+                </div>
+
+                <div class="feedInt">
+                    <div class="tiX size60 bold">
+                        Você não selecionou a resposta correta!
+                    </div>
+
+                    <div class="size40 mt50 light">
+                        Controles compensatórios são meios adotados para prevenir, identificar ou reduzir o impacto de ocorrência de riscos de acessos.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

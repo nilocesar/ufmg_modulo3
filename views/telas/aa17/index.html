@@ -1,0 +1,69 @@
+<script>
+    window["aa17"] = {
+        indice: "aa17",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa17").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            //reset();
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                //control()
+
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA17 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="240">
+            <div class="branco">
+                <div class="size40 animated fadeInLeft delay0_4 bold">
+                    TIPOS DE TESTES LABORATORIAIS
+                </div>
+            </div>
+        </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="350" py="430">
+
+            <div class="animated fadeInUp delay1_2 verde2 mb20 bold">
+                Teste imunocromatográfico para pesquisa de antígeno viral em amostras do trato respiratório superior:
+            </div>
+            <div class="animated fadeInUp delay1_0">
+                O teste com pesquisa de antígenos do COVID-19 pode ser utilizado para diagnóstico na fase aguda da doença (janela do 2º ao 7º dia após início dos sintomas). Esse tipo de teste ainda não tem a sensibilidade e a especificidade desejadas. Pode ser utilizado
+                na indisponibilidade dos testes moleculares, ou quando este for negativo <br>(ex.: coleta inapropriada ou fora da fase aguda da doença).
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>

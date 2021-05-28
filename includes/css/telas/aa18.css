@@ -1,0 +1,279 @@
+/*= AA1
+	----------------------------*/
+
+.containerAA18 {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    /* background: url(../../img/cenario1.jpg) no-repeat center;
+                                                        background-size: cover; */
+}
+
+.containerAA18 .baseFundo {
+    background: url(../../img/aa18.png) no-repeat center;
+    background-size: cover;
+}
+
+.containerAA18 .tit {
+    position: absolute;
+    width: 1137px;
+    overflow: hidden;
+}
+
+.containerAA18 .barraData {
+    position: absolute;
+    width: 870px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.containerAA18 .barraDataInit {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #6BADE8;
+    border-top-right-radius: 200px;
+}
+
+.containerAA18 .barraDataContent {
+    position: relative;
+    width: 95%;
+    height: 100%;
+    background: #4988CD;
+    border-top-right-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA18 .livro {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/lampada.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA18 .itemDY {
+    width: 70%;
+}
+
+.containerAA18 .lista {
+    position: absolute;
+    width: 1160px;
+}
+
+.containerAA18 .baseFundoFeed {
+    position: absolute;
+    width: 1328px;
+    height: 747px;
+    border: 5px solid #33649E;
+    background-color: rgba(35, 34, 34, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999999999999999999999999999999999;
+}
+
+.containerAA18 .content {
+    position: relative;
+    width: 1055px;
+    height: 580px;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.containerAA18 .feedPDF .baseFundoFeed {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    border: 5px solid rgba(51, 100, 158, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA18 .feedPDF .content {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 75px;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.containerAA18 .feedPDF iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.containerAA18 .feedPositivo .content {
+    background-color: #40B865;
+    width: 800px;
+    height: 480px;
+}
+
+.containerAA18 .closeX {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.containerAA18 .closeX:hover {
+    color: #33649E;
+}
+
+.containerAA18 .link {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+:root {
+    --heightWidthAA18: 750px;
+    --heightBlocoAA18: 485px;
+    --heightAbaAA18: 50px;
+    --itensAbasAA18: 4;
+}
+
+.containerAA18 .blockT {
+    position: absolute;
+    width: var(--heightWidthAA18);
+}
+
+.containerAA18 .bloco {
+    position: absolute;
+    width: var(--heightWidthAA18);
+    height: var(--heightBlocoAA18);
+    /* background-color: #fff !important; */
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+.containerAA18 .flexbox-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    flex-direction: column;
+}
+
+.containerAA18 .flexbox-slider .flexbox-slide {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    height: var(--heightAbaAA18);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    visibility: visible;
+}
+
+.containerAA18 .activeSlide {
+    flex-shrink: 0;
+    height: calc( var(--heightBlocoAA18) - (var(--heightAbaAA18) * (var(--itensAbasAA18) - 1))) !important;
+}
+
+.containerAA18 .text-tab {
+    position: relative;
+    width: 100%;
+    height: var(--heightAbaAA18);
+    z-index: 99999999;
+    text-align: center;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #6BADE8;
+    color: #4988CD;
+    font-size: 18px;
+    line-height: normal;
+}
+
+.containerAA18 .text-tab i {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    font-size: 30px;
+}
+
+.containerAA18 .textSlide {
+    position: relative;
+    width: 100%;
+    height: calc( 100% - var(--heightAbaAA18));
+    background-color: #4988CD;
+    z-index: 9999999;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA18 ul {
+    list-style: disc;
+    padding: 0 0 0 30px;
+}
+
+.containerAA18 .linkIgG {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.containerAA18 .balao {
+    position: absolute;
+    background: #6BADE8;
+    border-radius: 20px;
+    width: 450px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.containerAA18 .balao div {
+    border-radius: 20px;
+    padding: 20px;
+    background: #fff;
+}
+
+.containerAA18 .balao:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-top-color: #6BADE8;
+    border-bottom: 0;
+    margin-left: -27px;
+    margin-bottom: -25px;
+}

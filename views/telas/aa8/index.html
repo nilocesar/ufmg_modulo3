@@ -1,0 +1,215 @@
+<script>
+    window["aa8"] = {
+        indice: "aa8",
+        status: false,
+        player1: null,
+        videoID1: 'WGglcix_rGU',
+        playling1: 0,
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if (window["aa8"].player1 != null) {
+            if (window["aa8"].playling1 == 1) {
+                window["aa8"].player1.pauseVideo();
+            }
+        }
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa8").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            _containerTela.find(".feedX").css('display', 'none');
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                controle();
+
+            } else {
+
+            }
+
+            function controle() {
+
+                _containerTela.find(".feedX").css('display', 'none');
+
+                var _item = null;
+                _containerTela.find(".itx").on('click', function() {
+
+
+                    $(this).attr('ativo', '1')
+
+                    _item = $(this).attr('item');
+                    _containerTela.find(".feed" + _item).css('display', 'flex');
+                });
+
+
+                _containerTela.find(".closeX").on('click', function() {
+                    _containerTela.find(".feedX").css('display', 'none');
+
+                    if (_item == 1)
+                        window["aa8"].player1.pauseVideo();
+
+                    var _comp = true;
+                    _containerTela.find(".itx").each(function(indice, item) {
+
+                        if (!$(item).attr('ativo')) {
+                            _comp = false;
+                        }
+                    })
+
+                    if (_comp)
+                        course.liberarNavegacao();
+
+                });
+            }
+        }
+    })
+
+    if (window["aa8"].player1 == null) {
+
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubePlayerAPIReady() {
+            window["aa8"].player1 = new YT.Player('ytplayerAA8', {
+                videoId: window["aa8"].videoID1,
+                events: {
+                    'onStateChange': onPlayerStateChange1
+                }
+            });
+        }
+
+
+
+        function onPlayerStateChange1(event) {
+
+            if (event.target.getPlayerState() == 0) {
+                // console.log('complete video');
+            } else if (event.target.getPlayerState() == 1) {
+                window["aa8"].playling1 = 1;
+            } else {
+                window["aa8"].playling1 = 0;
+            }
+
+        }
+    }
+</script>
+
+
+<div class="containerAA8 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="865">
+            <div class="barraDataInit animated fadeInLeftBig delay0_6 itx" item=1>
+                <div class="barraDataContent animated fadeInLeftBig delay1_0 branco">
+                    <div>
+                        <div class="size22">
+                            <span class="bold">Saiba mais:</span> <span class="linkS">  Aerossóis e gotículas são os principais meios de transmissão do novo coronavírus, TV UFMG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subt1 posicionar animated fadeIn delay1_4" px="357" py="363">
+            <div class="size26 bold">
+                A COVID-19 é transmitida de pessoa para pessoa principalmente pela tosse, espirro e fala.
+            </div>
+            <div class="lista mt20">
+                <div class="itemX itemX1 animated zoomIn delay1_6">
+                    <div class="imgBlock">
+                        <div class="ico"></div>
+                        <div class="txtIco">
+                            Gotículas
+                        </div>
+                    </div>
+                    <div class="txtBlcok">
+                        Secreções respiratórias que se espalham no ambiente quando a pessoa tosse ou espirra.
+                    </div>
+                </div>
+
+                <div class="itemX itemX2 animated zoomIn delay1_8">
+                    <div class="imgBlock">
+                        <div class="ico"></div>
+                        <div class="txtIco">
+                            Aerossóis
+                        </div>
+                    </div>
+                    <div class="txtBlcok">
+                        Uma partícula sólida <br>ou gota líquida<br> suspensa no ar.
+                    </div>
+                </div>
+
+                <div class="itemX itemX3 animated zoomIn delay2_0">
+                    <div class="imgBlock">
+                        <div class="ico"></div>
+                        <div class="txtIco">
+                            Contato
+                        </div>
+                    </div>
+                    <div class="txtBlcok">
+                        Tocar em algo que tenha o vírus e, em seguida, tocar na sua própria boca, nariz ou olhos.
+                    </div>
+                </div>
+
+                <div class="itemX itemX4 animated zoomIn delay2_4">
+                    <div class="imgBlock">
+                        <div class="ico"></div>
+                        <div class="txtIco">
+                            Outras rotas possíveis
+                        </div>
+                    </div>
+                    <div class="txtBlcok">
+                        Por meio de <br>matéria fecal.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="250">
+            <div class="branco">
+                <div class="size48 animated fadeInLeft delay0_4 bold">
+                    VIAS DE TRANSMISSÃO
+                </div>
+            </div>
+        </div>
+
+        <div class="feedX feed1 animated fadeIn">
+            <div class="fundoFeedsConteiner"></div>
+            <div class="baseFundoFeed posicionar animated fadeIn delay0_2" px="0" py="0">
+                <div class="content animated fadeIn branco">
+
+                    <div class="closeX">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+                    <div id="ytplayerAA8" class="ytplayer"></div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</div>
