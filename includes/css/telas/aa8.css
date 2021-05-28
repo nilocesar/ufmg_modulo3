@@ -9,30 +9,30 @@
     width: 100%;
     z-index: 9999;
     /* background: url(../../img/cenario1.jpg) no-repeat center;
-                                    background-size: cover; */
+                                background-size: cover; */
 }
 
 .containerAA8 .baseFundo {
-    background: url(../../img/aa8.png) no-repeat center;
+    background: url(../../img/aa6.png) no-repeat center;
     background-size: cover;
 }
 
 
 /* -------------------------------- 
-                                
-                                Main Components 
-                                
-                                -------------------------------- */
+                            
+                            Main Components 
+                            
+                            -------------------------------- */
 
 .containerAA8 .tit {
     position: absolute;
-    width: 1137px;
+    width: 837px;
     overflow: hidden;
 }
 
 .containerAA8 .bloco {
     position: absolute;
-    width: 1111px;
+    width: 1251px;
     height: 541px;
     /* background-color: #041d37 !important; */
     display: flex;
@@ -40,7 +40,6 @@
     align-items: center;
     /* padding: 15px; */
     /* border: 1px solid #FF5900; */
-    border-radius: 50px;
 }
 
 .containerAA8 .step {
@@ -52,19 +51,79 @@
     position: relative;
     width: 100%;
     height: 100%;
-    /* background-color: #F48C0F; */
-    /* border-radius: 20px; */
-    /* padding: 0px 40px; */
-    border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.containerAA8 .step1 {
+    position: relative;
+}
+
+.containerAA8 .step1 .pc {
+    position: relative;
+    width: 774px;
+    height: 393px;
+    background: url(../../img/pc.png) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA8 .step1 .videoBase {
+    position: absolute;
+    width: 583px;
+    height: 312px;
+    background: rgb(0, 0, 0);
+    top: 25px;
+    left: 87px;
+}
+
+.containerAA8 .step1 .placeholder {
+    position: absolute;
+    width: 600px;
+    height: 322px;
+    background: url(../../img/placeAA8.png) no-repeat center;
+    background-size: cover;
+    top: 20px;
+    left: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.containerAA8 .step1 .placeholder i {
+    color: #ffffff;
+    font-size: 200px;
+    transition: all 0.5s ease;
+}
+
+.containerAA8 .step1 .placeholder:hover i {
+    color: #245CA0;
+    transform: scale(1.1);
+}
+
+.containerAA8 .step1 .text {
+    position: relative;
+    /* padding: 10px; */
+    width: 450px;
+}
+
+.containerAA8 .stepXD {
+    justify-content: space-between;
+}
+
+.containerAA8 .stepXD .imgX {
+    position: relative;
+    width: 419px;
+    height: 100%;
+    /* background: url(../../img/img1AA7.png) no-repeat center;
+        background-size: cover; */
+}
+
 .containerAA8 .barraData {
     position: absolute;
     width: 1270px;
-    height: 75px;
+    height: 149px;
     overflow: hidden;
 }
 
@@ -72,17 +131,15 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: #6FEC83;
+    background: #6BADE8;
     border-top-right-radius: 200px;
-    cursor: pointer;
-    color: #fff;
 }
 
 .containerAA8 .barraDataContent {
     position: relative;
     width: 90%;
     height: 100%;
-    background: #30BF58;
+    background: #4988CD;
     border-top-right-radius: 200px;
     display: flex;
     /* justify-content: center; */
@@ -90,81 +147,12 @@
     padding-left: 50px;
 }
 
-.containerAA8 .linkS {
-    text-decoration: underline;
-}
-
-.containerAA8 .subt1 {
-    position: absolute;
-    width: 1210px;
-}
-
-.containerAA8 .lista {
+.containerAA8 .livro {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-
-.containerAA8 .itemX {
-    position: relative;
-    width: 291px;
-    height: 409px;
-    border-radius: 20px;
-    border: 2px solid #30BF58;
-    overflow: hidden;
-    text-align: center;
-}
-
-.containerAA8 .imgBlock {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #30BF58;
-    height: 50%;
-    color: #fff;
-    font-size: 25px;
-    font-family: "bold";
-    padding: 10px;
-}
-
-.containerAA8 .imgBlock .ico {
-    position: relative;
-    width: 150px;
-    height: 130px;
-    background: red;
-    margin-bottom: 10px;
-}
-
-.containerAA8 .itemX1 .ico {
-    background: url(../../img/img1AA8.svg) no-repeat center;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/livro.svg) no-repeat center;
     background-size: contain;
-}
-
-.containerAA8 .itemX2 .ico {
-    background: url(../../img/img2AA8.svg) no-repeat center;
-    background-size: contain;
-}
-
-.containerAA8 .itemX3 .ico {
-    background: url(../../img/img3AA8.svg) no-repeat center;
-    background-size: contain;
-}
-
-.containerAA8 .itemX4 .ico {
-    background: url(../../img/img4AA8.svg) no-repeat center;
-    background-size: contain;
-}
-
-.containerAA8 .txtBlcok {
-    position: relative;
-    height: 50%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 23px;
 }
 
 .containerAA8 .baseFundoFeed {
@@ -209,6 +197,30 @@
 
 .containerAA8 .content .ytplayer {
     position: relative;
+    width: 1480px;
+    height: 833px;
+}
+
+.containerAA8 .feedPDF iframe {
+    position: relative;
     width: 100%;
     height: 100%;
+    background: #fff;
+}
+
+.containerAA8 .itemDY {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+.containerAA8 .list ul {
+    font-size: 22px;
+}
+
+.containerAA8 .list ul li {
+    padding: 20px;
+    border-left: 12px solid #5286DA;
+    margin: 20px 10px;
+    background: linear-gradient(rgba(191, 211, 239, 0.4) 0%, rgba(255, 255, 255, 0.5) 100%);
 }

@@ -9,31 +9,108 @@
     width: 100%;
     z-index: 9999;
     /* background: url(../../img/cenario1.jpg) no-repeat center;
-                                                    background-size: cover; */
+                                        background-size: cover; */
 }
 
 .containerAA16 .baseFundo {
-    background: url(../../img/aa15.png) no-repeat center;
+    background: url(../../img/aa16c.png) no-repeat center;
     background-size: cover;
+    /* background-color: #fff; */
 }
 
 
 /* -------------------------------- 
-                                                
-                                                Main Components 
-                                                
-                                                -------------------------------- */
+                                    
+                                    Main Components 
+                                    
+                                    -------------------------------- */
 
-.containerAA16 .tit {
+.containerAA16 .titulo {
     position: absolute;
-    width: 1137px;
+    width: 602px;
+}
+
+.containerAA16 .grafic {
+    position: absolute;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerAA16 .item {
+    position: relative;
+    width: 100%;
+    /* border-radius: 40px; */
     overflow: hidden;
+    /* border: 3px solid #4983C8;
+                padding: 20px; */
+    font-size: 26px;
+}
+
+.containerAA16 .item2 {
+    border: 3px solid #30BA58;
+}
+
+.containerAA16 .titulD {
+    position: relative;
+    padding: 20px;
+    background: #4983C8;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-family: "bold";
+}
+
+.containerAA16 .item2 .titulD {
+    background: #30BA58;
+}
+
+.containerAA16 .conteD {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 30px;
+    height: 270px;
+}
+
+.containerAA16 li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 1.3em;
+}
+
+.containerAA16 ul li:before {
+    position: absolute;
+    content: '✓';
+    color: #EC7A50;
+    left: 0;
+    /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
+}
+
+.containerAA16 .td {
+    padding-left: 1em;
+}
+
+.containerAA16 .td:before {
+    position: absolute;
+    content: '•';
+    color: #EC7A50;
+    left: 0;
+    font-size: 30px;
+    /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
 }
 
 .containerAA16 .barraData {
     position: absolute;
     width: 1270px;
-    height: 100px;
+    height: 149px;
     overflow: hidden;
 }
 
@@ -41,123 +118,86 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: #6FEC83;
-    border-top-right-radius: 200px;
+    background: #FF9780;
+    border-top-left-radius: 200px;
 }
 
 .containerAA16 .barraDataContent {
     position: relative;
-    width: 95%;
+    width: 90%;
     height: 100%;
-    background: #30BF58;
-    border-top-right-radius: 200px;
+    background: #E77A50;
+    border-top-left-radius: 200px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    padding-left: 50px;
+    left: 10%;
 }
 
 .containerAA16 .livro {
     position: relative;
     width: 80px;
     height: 80px;
-    background: url(../../img/info.svg) no-repeat center;
+    background: url(../../img/livro.svg) no-repeat center;
     background-size: contain;
 }
 
-.containerAA16 .itemDY {
-    width: 85%;
-}
-
-.containerAA16 .lista {
+.containerAA16 .baseFundoFeed {
     position: absolute;
-    width: 1160px;
-}
-
-.containerAA16 ul {
-    list-style: disc;
-    padding: 30px;
-}
-
-.containerAA16 .aba {
-    position: absolute;
-    width: 1160px;
-}
-
-.containerAA16 .tabs {
-    width: 100%;
-    background-color: transparent;
-    position: relative;
-    perspective: 1000px;
-}
-
-.containerAA16 .tabs__form {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    list-style: none;
-    position: relative;
-}
-
-.containerAA16 .tabs__label {
-    position: relative;
-    height: 50px;
+    width: 1920px;
+    height: 1080px;
+    /* border: 5px solid #33649E; */
+    background-color: rgba(35, 34, 34, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    /* flex: 1; */
-    padding: 10px 35px;
-    cursor: pointer;
-    color: #21A540;
-    background-color: #fff;
-    border-top: 2px solid #21A540;
-    border-left: 2px solid #21A540;
-    border-right: 2px solid #21A540;
-    border-radius: 10px 10px 0px 0px;
-    font-size: 28px;
+    z-index: 999999999999999999999999999999999999999999999;
 }
 
-.containerAA16 .tabs__label:hover {
-    color: #fff;
-    background-color: #30bf58;
-}
-
-.containerAA16 .tabs__labelAtivo {
-    color: #fff !important;
-    background-color: #30bf58 !important;
-}
-
-.containerAA16 .tabs__labelAtivo::before {
-    position: absolute;
-    content: "";
+.containerAA16 .content {
+    position: relative;
     width: 90%;
-    bottom: 0;
-    left: 50%;
-    margin-left: -45%;
-    border-top: 2px solid #fff;
-}
-
-.containerAA16 .tabs__content {
-    position: absolute;
-    width: 100%;
-    height: 240px;
-    z-index: -1;
-    top: 50px;
-    left: 0;
-    text-align: left;
-    padding: 20px;
-    transition: opacity 1s, transform 2s;
-    background: #30bf58;
-    color: #fff;
-    font-size: 25px;
-    box-shadow: 0px 20px 59px 5px rgba(0, 0, 0, 0.15);
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    display: none;
+    height: 90%;
+    background-color: #F48C0F;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 999999999999999999999999999999999999999999999;
 }
 
-.containerAA16 .tabs__contentAtivo {
-    display: flex;
+.containerAA16 .closeX {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.containerAA16 .closeX:hover {
+    color: #33649E;
+}
+
+.containerAA16 .content .ytplayer {
+    position: relative;
+    width: 1480px;
+    height: 833px;
+}
+
+.containerAA16 .feedPDF iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.containerAA16 .itemDY {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
 }

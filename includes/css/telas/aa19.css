@@ -9,55 +9,78 @@
     width: 100%;
     z-index: 9999;
     /* background: url(../../img/cenario1.jpg) no-repeat center;
-                                    background-size: cover; */
+                                                background-size: cover; */
 }
 
 .containerAA19 .baseFundo {
-    background: url(../../img/aa11.png) no-repeat center;
+    background: url(../../img/aa19c.png) no-repeat center;
     background-size: cover;
+    /* background-color: #fff; */
 }
 
 
 /* -------------------------------- 
-                                
-                                Main Components 
-                                
-                                -------------------------------- */
+                                            
+                                            Main Components 
+                                            
+                                            -------------------------------- */
 
-.containerAA19 .tit {
+.containerAA19 .titulo {
     position: absolute;
-    width: 837px;
-    overflow: hidden;
+    width: 602px;
 }
 
-.containerAA19 .bloco {
+.containerAA19 .grafic {
     position: absolute;
-    width: 1311px;
-}
-
-.containerAA19 .list {
-    position: relative;
+    width: 800px;
     display: flex;
+    justify-content: space-between;
 }
 
-.containerAA19 .list div {
+.containerAA19 .item {
     position: relative;
-    width: 50%;
-    padding: 20px;
+    width: 100%;
+    /* border-radius: 40px; */
+    /* overflow: hidden; */
+    /* border: 3px solid #4983C8;
+                        padding: 20px; */
+    font-size: 26px;
 }
 
-.containerAA19 ul {
-    list-style: disc;
-    padding: 0 0 0 10px;
-}
-
-.containerAA19 ul li {
+.containerAA19 li {
+    position: relative;
     margin-bottom: 10px;
+    padding-left: 1.3em;
+}
+
+.containerAA19 ul li:before {
+    position: absolute;
+    content: '✓';
+    color: #4983C8;
+    left: 0;
+    /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
+}
+
+.containerAA19 .td {
+    padding-left: 1em;
+}
+
+.containerAA19 .td:before {
+    position: absolute;
+    content: '•';
+    color: #4983C8;
+    left: 0;
+    font-size: 30px;
+    /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
 }
 
 .containerAA19 .barraData {
     position: absolute;
-    width: 1270px;
+    width: 817px;
     height: 149px;
     overflow: hidden;
 }
@@ -66,26 +89,27 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: #FF9C85;
-    border-top-right-radius: 200px;
+    background: #30BA58;
+    /* border-top-right-radius: 200px; */
 }
 
 .containerAA19 .barraDataContent {
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 100%;
-    background: #EC7A50;
-    border-top-right-radius: 200px;
+    background: #30BA58;
+    /* border-top-right-radius: 200px; */
     display: flex;
     /* justify-content: center; */
     align-items: center;
     padding-left: 50px;
+    /* left: 10%; */
 }
 
 .containerAA19 .livro {
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background: url(../../img/lampada.svg) no-repeat center;
     background-size: contain;
 }
@@ -132,8 +156,8 @@
 
 .containerAA19 .content .ytplayer {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 1480px;
+    height: 833px;
 }
 
 .containerAA19 .feedPDF iframe {
@@ -147,4 +171,33 @@
     text-decoration: underline;
     color: #fff;
     cursor: pointer;
+}
+
+.containerAA19 .itemD {
+    position: relative;
+    width: 90%;
+    border-radius: 40px;
+    overflow: hidden;
+    border: 3px solid #4983C8;
+}
+
+.containerAA19 .titulD {
+    position: relative;
+    padding: 10px;
+    background: #4983C8;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    font-family: "bold";
+}
+
+.containerAA19 .conteD {
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 22px;
+    text-align: center;
 }

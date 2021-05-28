@@ -9,20 +9,20 @@
     width: 100%;
     z-index: 9999;
     /* background: url(../../img/cenario1.jpg) no-repeat center;
-                                    background-size: cover; */
+                                                background-size: cover; */
 }
 
 .containerAA11 .baseFundo {
-    background: url(../../img/aa11.png) no-repeat center;
+    background: url(../../img/aa11c.png) no-repeat center;
     background-size: cover;
 }
 
 
 /* -------------------------------- 
-                                
-                                Main Components 
-                                
-                                -------------------------------- */
+                                            
+                                            Main Components 
+                                            
+                                            -------------------------------- */
 
 .containerAA11 .tit {
     position: absolute;
@@ -30,18 +30,87 @@
     overflow: hidden;
 }
 
-.containerAA11 .list {
+.containerAA11 .lista {
     position: absolute;
-    width: 420px;
+    width: 1137px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerAA11 .list {
+    width: 60%;
+}
+
+.containerAA11 .escada {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.containerAA11 .item {
+    position: relative;
+    width: 100%;
+    background: #4983C8;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'bold';
+    border-radius: 20px;
+}
+
+.containerAA11 .item::after {
+    position: absolute;
+    content: "↓";
+    font-size: 40px;
+    bottom: -45px;
+    left: 50%;
+    margin-left: -20px;
+    font-family: "bold";
+    color: #000;
+}
+
+.containerAA11 .item:last-child:after {
+    content: "";
+}
+
+.containerAA11 .item2 {
+    position: relative;
+    width: 90%;
+    background: #30BA58;
+}
+
+.containerAA11 .item3 {
+    position: relative;
+    width: 80%;
+    background: #E77A50;
+}
+
+.containerAA11 .item4 {
+    position: relative;
+    width: 80%;
+    background: #FFD91F;
+}
+
+.containerAA11 .item5 {
+    position: relative;
+    width: 70%;
+    background: #0B918D;
 }
 
 .containerAA11 .list ul {
-    font-size: 22px;
+    /* font-size: 30px; */
 }
 
-.containerAA11 .list ul li {
+.containerAA11 .list .itemX {
     padding: 20px;
-    border-left: 12px solid #EC7A50;
+    border-left: 12px solid #EF870F;
     margin: 20px 10px;
     background: linear-gradient(rgba(247, 171, 80, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
@@ -54,29 +123,24 @@
     background-size: contain;
 }
 
-:root {
-    --heightWidthAA11: 433px;
-    --heightBlocoAA11: 300px;
-    --heightAbaAA11: 60px;
-    --itensAbasAA11: 2;
-}
-
-.containerAA11 .blockT {
-    position: absolute;
-    width: var(--heightWidthAA11);
-}
-
 .containerAA11 .bloco {
     position: absolute;
-    width: var(--heightWidthAA11);
-    height: var(--heightBlocoAA11);
+    width: 433px;
+    height: 300px;
     /* background-color: #fff !important; */
+    z-index: 999999999;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
     box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
+}
+
+.containerAA11 .fundoColor {
+    background-color: #EC7A50;
+    width: 100%;
+    height: 100%;
 }
 
 .containerAA11 .flexbox-slider {
@@ -92,7 +156,7 @@
     transition-duration: 0.3s;
     transition-timing-function: linear;
     transition-delay: 0s;
-    height: var(--heightAbaAA11);
+    height: 60px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -102,19 +166,19 @@
 
 
 /* .containerAA11  .flexbox-slide:hover {
-    flex-shrink: 0;
-    width: 80%;
-  } */
+                flex-shrink: 0;
+                width: 80%;
+              } */
 
 .containerAA11 .activeSlide {
     flex-shrink: 0;
-    height: calc( var(--heightBlocoAA11) - (var(--heightAbaAA11) * (var(--itensAbasAA11) - 1))) !important;
+    height: 240px !important;
 }
 
 .containerAA11 .text-tab {
     position: relative;
     width: 100%;
-    height: var(--heightAbaAA11);
+    height: 60px;
     z-index: 99999999;
     text-align: center;
     background-color: #fff;
@@ -137,16 +201,17 @@
 
 .containerAA11 .textSlide {
     position: relative;
+    /* display: flex;
+                justify-content: center;
+                align-items: center; */
     width: 100%;
-    height: calc( 100% - var(--heightAbaAA11));
+    height: 280px;
     background-color: #EC7A50;
     z-index: 9999999;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 20px 40px;
 }
 
-.containerAA11 .textSlide ul {
+.containerAA11 ul {
     list-style: disc;
+    padding: 30px;
 }

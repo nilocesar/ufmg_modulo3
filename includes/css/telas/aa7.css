@@ -24,75 +24,41 @@
                             
                             -------------------------------- */
 
-.containerAA7 .tit {
+.containerAA7 .titulo {
     position: absolute;
-    width: 1137px;
-    overflow: hidden;
+    width: 883px;
 }
 
-.containerAA7 .bloco {
+.containerAA7 .list {
     position: absolute;
-    width: 1111px;
-    height: 541px;
-    /* background-color: #041d37 !important; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 15px; */
-    /* border: 1px solid #FF5900; */
-    border-radius: 50px;
+    width: 700px;
 }
 
-.containerAA7 .step {
-    display: none;
-    overflow: hidden;
+.containerAA7 .list {
+    font-size: 25px;
 }
 
-.containerAA7 .step {
+.containerAA7 ul li {
     position: relative;
-    width: 100%;
-    height: 100%;
-    /* background-color: #F48C0F; */
-    /* border-radius: 20px; */
-    /* padding: 0px 40px; */
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 1.5em;
 }
 
-.containerAA7 .barraData {
+.containerAA7 ul li:before {
     position: absolute;
-    width: 1270px;
-    height: 75px;
-    overflow: hidden;
+    content: '✓';
+    color: #EC7A50;
+    left: 0;
+    font-size: 40px;
+    width: 1.2em;
+    height: 1.2em;
 }
 
-.containerAA7 .barraDataInit {
+.containerAA7 .t1 {
     position: relative;
-    width: 100%;
-    height: 100%;
-    background: #FFC4B8;
-    border-top-right-radius: 200px;
-}
-
-.containerAA7 .barraDataContent {
-    position: relative;
-    width: 90%;
-    height: 100%;
-    background: #EC7A50;
-    border-top-right-radius: 200px;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    padding-left: 50px;
-}
-
-.containerAA7 a {
-    text-decoration: underline;
-}
-
-.containerAA7 .subt1 {
-    position: absolute;
-    width: 1270px;
+    /* background: #F48C0F;
+    color: #fff; */
+    font-size: 30px;
+    /* padding: 10px;
+    text-align: center; */
 }

@@ -9,68 +9,142 @@
     width: 100%;
     z-index: 9999;
     /* background: url(../../img/cenario1.jpg) no-repeat center;
-                    background-size: cover; */
+                                                background-size: cover; */
 }
 
 .containerAA10 .baseFundo {
-    /* background: url(../../img/aa9.png) no-repeat center;
-    background-size: cover; */
-    background-color: #fff;
+    background: url(../../img/aa10c.png) no-repeat center;
+    background-size: cover;
 }
 
 
 /* -------------------------------- 
-                
-                Main Components 
-                
-                -------------------------------- */
+                                            
+                                            Main Components 
+                                            
+                                            -------------------------------- */
 
-.containerAA10 .titulo {
+.containerAA10 .tit {
     position: absolute;
-    width: 602px;
-}
-
-.containerAA10 a {
-    text-decoration: underline;
-    color: #fff;
-    cursor: pointer;
+    width: 1137px;
+    overflow: hidden;
 }
 
 .containerAA10 .lista {
     position: absolute;
-    width: 700px;
+    width: 720px;
 }
 
-.containerAA10 .item {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    margin-bottom: 20px;
+.containerAA10 .lista ul {
+    /* font-size: 30px; */
 }
 
-.containerAA10 .text {
-    position: relative;
-    width: 100%;
+.containerAA10 .lista .itemX {
+    padding: 20px;
+    border-left: 12px solid #EF870F;
+    margin: 20px 10px;
+    background: linear-gradient(rgba(247, 171, 80, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
 
-.containerAA10 .itemBlock {
-    position: relative;
-    border-radius: 20px;
-    border: 5px solid #EC7A50;
-    width: 90%;
+.containerAA10 .imagem {
+    position: absolute;
+    width: 723px;
+    height: 446px;
+    background: url(../../img/img1AA11.png) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA10 .bloco {
+    position: absolute;
+    width: 433px;
+    height: 300px;
+    /* background-color: #fff !important; */
+    z-index: 999999999;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     overflow: hidden;
 }
 
-.containerAA10 .itemBlock .tituloBlock {
-    position: relative;
-    background: #EC7A50;
-    padding: 20px;
+.containerAA10 .fundoColor {
+    background-color: #EC7A50;
+    width: 100%;
+    height: 100%;
 }
 
-.containerAA10 .itemBlock .subConteud {
-    padding: 10px;
+.containerAA10 .flexbox-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    flex-direction: column;
+}
+
+.containerAA10 .flexbox-slider .flexbox-slide {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    height: 60px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    visibility: visible;
+}
+
+
+/* .containerAA10  .flexbox-slide:hover {
+                flex-shrink: 0;
+                width: 80%;
+              } */
+
+.containerAA10 .activeSlide {
+    flex-shrink: 0;
+    height: 240px !important;
+}
+
+.containerAA10 .text-tab {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    z-index: 99999999;
+    text-align: center;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #9f4524;
+    color: #9f4524;
+}
+
+.containerAA10 .text-tab i {
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    font-size: 50px;
+    /* opacity: 0.6; */
+}
+
+.containerAA10 .textSlide {
+    position: relative;
+    /* display: flex;
+                justify-content: center;
+                align-items: center; */
+    width: 100%;
+    height: 280px;
+    background-color: #EC7A50;
+    z-index: 9999999;
+    padding: 20px 40px;
+}
+
+.containerAA10 ul {
+    list-style: disc;
+    padding: 30px;
 }
 
 .containerAA10 .barraData {
@@ -84,7 +158,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background: #FF9C85;
+    background: #F9C36E;
     border-top-right-radius: 200px;
 }
 
@@ -92,12 +166,12 @@
     position: relative;
     width: 90%;
     height: 100%;
-    background: #EC7A50;
+    background: #EF870F;
     border-top-right-radius: 200px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    padding-left: 200px;
+    padding-left: 50px;
 }
 
 .containerAA10 .livro {
@@ -108,24 +182,11 @@
     background-size: contain;
 }
 
-.containerAA10 .imgX {
-    position: absolute;
-    width: 600px;
-    height: 748px;
-    background: url(../../img/img1AA10.png ) no-repeat center;
-    background-size: contain;
-}
-
-.containerAA10 .titulo {
-    position: absolute;
-    width: 687px;
-}
-
 .containerAA10 .baseFundoFeed {
     position: absolute;
-    width: 1328px;
-    height: 747px;
-    border: 5px solid #33649E;
+    width: 1920px;
+    height: 1080px;
+    /* border: 5px solid #33649E; */
     background-color: rgba(35, 34, 34, 0.8);
     display: flex;
     justify-content: center;
@@ -135,60 +196,23 @@
 
 .containerAA10 .content {
     position: relative;
-    width: 1055px;
-    height: 580px;
+    width: 90%;
+    height: 90%;
     background-color: #F48C0F;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 70px;
     border-radius: 20px;
     overflow: hidden;
-}
-
-.containerAA10 .feedPDF .baseFundoFeed {
-    position: absolute;
-    width: 1920px;
-    height: 1080px;
-    display: flex;
-    border: 5px solid rgba(51, 100, 158, 0);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerAA10 .feedPDF .content {
-    position: relative;
-    width: 95%;
-    height: 95%;
-    background-color: #F48C0F;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 75px;
-    border-radius: 0px;
-    overflow: hidden;
-}
-
-.containerAA10 .feedPDF iframe {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-}
-
-.containerAA10 .feedPositivo .content {
-    background-color: #40B865;
-    width: 800px;
-    height: 480px;
+    z-index: 999999999999999999999999999999999999999999999;
 }
 
 .containerAA10 .closeX {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 0px;
+    right: 10px;
     color: #fff;
     font-size: 40px;
     cursor: pointer;
@@ -198,15 +222,17 @@
     color: #33649E;
 }
 
-.containerAA10 .itx {
+.containerAA10 .content .ytplayer {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 1480px;
+    height: 833px;
 }
 
-.containerAA10 .txtSA {
-    padding: 20px;
+.containerAA10 .feedPDF iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
 }
 
 .containerAA10 .itemDY {

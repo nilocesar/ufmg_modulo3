@@ -9,140 +9,100 @@
     width: 100%;
     z-index: 9999;
     /* background: url(../../img/cenario1.jpg) no-repeat center;
-                                        background-size: cover; */
+                            background-size: cover; */
 }
 
 .containerAA12 .baseFundo {
-    background: url(../../img/aa11.png) no-repeat center;
+    background: url(../../img/aa12c.png) no-repeat center;
     background-size: cover;
+    /* background-color: #fff; */
 }
 
 
 /* -------------------------------- 
-                                    
-                                    Main Components 
-                                    
-                                    -------------------------------- */
+                        
+                        Main Components 
+                        
+                        -------------------------------- */
 
-.containerAA12 .tit {
+.containerAA12 .titulo {
     position: absolute;
-    width: 1137px;
-    overflow: hidden;
+    width: 602px;
 }
 
-.containerAA12 .lista {
+.containerAA12 .grafic {
     position: absolute;
-    width: 1020px;
-}
-
-.containerAA12 .lista ul {
-    /* font-size: 30px; */
-}
-
-.containerAA12 .lista .itemX {
-    padding: 20px;
-    border-left: 12px solid #EC7A50;
-    margin: 20px 10px;
-    background: linear-gradient(rgba(247, 171, 80, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%);
-}
-
-.containerAA12 .imagem {
-    position: absolute;
-    width: 723px;
-    height: 446px;
-    background: url(../../img/img1AA11.png) no-repeat center;
-    background-size: contain;
-}
-
-.containerAA12 .bloco {
-    position: absolute;
-    width: 433px;
-    height: 300px;
-    /* background-color: #fff !important; */
-    z-index: 999999999;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
-}
-
-.containerAA12 .fundoColor {
-    background-color: #EC7A50;
-    width: 100%;
-    height: 100%;
-}
-
-.containerAA12 .flexbox-slider {
+    width: 1100px;
     display: flex;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
-.containerAA12 .flexbox-slider .flexbox-slide {
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
-    height: 60px;
-    width: 100%;
+.containerAA12 .item {
     position: relative;
+    width: 100%;
+    /* border-radius: 40px; */
     overflow: hidden;
-    cursor: pointer;
-    visibility: visible;
+    /* border: 3px solid #4983C8;
+    padding: 20px; */
+    font-size: 26px;
 }
 
-
-/* .containerAA12  .flexbox-slide:hover {
-        flex-shrink: 0;
-        width: 80%;
-      } */
-
-.containerAA12 .activeSlide {
-    flex-shrink: 0;
-    height: 240px !important;
+.containerAA12 .item2 {
+    border: 3px solid #30BA58;
 }
 
-.containerAA12 .text-tab {
+.containerAA12 .titulD {
     position: relative;
-    width: 100%;
-    height: 60px;
-    z-index: 99999999;
+    padding: 20px;
+    background: #4983C8;
+    color: #fff;
     text-align: center;
-    background-color: #fff;
-    top: 0;
-    left: 0;
+    font-size: 30px;
+    font-family: "bold";
+}
+
+.containerAA12 .item2 .titulD {
+    background: #30BA58;
+}
+
+.containerAA12 .conteD {
+    position: relative;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid #9f4524;
-    color: #9f4524;
+    background-color: #fff;
+    font-size: 30px;
+    height: 270px;
 }
 
-.containerAA12 .text-tab i {
-    position: absolute;
-    top: -2px;
-    right: 10px;
-    font-size: 50px;
-    /* opacity: 0.6; */
-}
-
-.containerAA12 .textSlide {
+.containerAA12 li {
     position: relative;
-    /* display: flex;
-        justify-content: center;
-        align-items: center; */
-    width: 100%;
-    height: 280px;
-    background-color: #EC7A50;
-    z-index: 9999999;
-    padding: 20px 40px;
+    margin-bottom: 10px;
+    padding-left: 1.3em;
 }
 
-.containerAA12 ul {
-    list-style: disc;
-    padding: 30px;
+.containerAA12 ul li:before {
+    position: absolute;
+    content: '✓';
+    color: #EC7A50;
+    left: 0;
+    /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
+}
+
+.containerAA12 .td {
+    padding-left: 1em;
+}
+
+.containerAA12 .td:before {
+    position: absolute;
+    content: '•';
+    color: #EC7A50;
+    left: 0;
+    font-size: 30px;
+    /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
 }

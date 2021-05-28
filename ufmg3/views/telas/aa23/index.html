@@ -1,0 +1,114 @@
+<script>
+    window["aa23"] = {
+        indice: "aa23",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa23").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+                _containerTela.aba();
+
+
+            } else {
+
+            }
+
+        }
+    })
+</script>
+
+
+<div class="containerAA23 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="barraData posicionar animated fadeIn delay0_2" px="307" py="840">
+            <div class="barraDataInit animated fadeInLeftBig delay1_6 itx" item=1>
+                <div class="barraDataContent animated fadeInLeftBig delay2_0 branco">
+                    <div class="livro mr30"></div>
+                    <div class="mt5 size24 itemDY">
+                        <div class="bold size30">
+                            SAIBA MAIS
+                        </div>
+                        <a href="https://coronavirus.msf.org.br/desafios-da-vacina/" target="_blank" rel="nofollow">
+                            Os Desafios da Vacina  
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tit posicionar animated fadeIn" px="350" py="250">
+            <div class="branco">
+                <div class="size40 animated fadeInUp delay0_4 bold">
+                    VACINAS
+                </div>
+            </div>
+        </div>
+
+        <div class="lista posicionar animated fadeIn size30" px="350" py="450">
+            <div class="animated fadeInUp delay0_8">
+                As vacinas são classificadas em três gerações tecnológicas:
+            </div>
+        </div>
+
+
+        <div class="aba posicionar animated fadeIn size30" px="350" py="500">
+            <div class="tabs animated fadeInUp delay1_2">
+                <div class="tabs__form">
+                    <div class="item item1" item=1>
+                        <label for="tabs1" class="tabs__label">1ª GERAÇÃO</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                São produzidas a partir de agentes infecciosos inativados ou atenuados.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item2" item=2>
+                        <label for="tabs2" class="tabs__label">2ª GERAÇÃO</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                São produzidas a partir de antígenos do agente infeccioso (partes ou proteínas do agente que têm importância no mecanismo de infecção e manifestação da doença).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item item3" item=3>
+                        <label for="tabs3" class="tabs__label">3ª GERAÇÃO</label>
+                        <div class="tabs__content">
+                            <div class="animated fadeInUp">
+                                Também conhecidas como vacinas de DNA ou de mRNA (RNA mensageiro), não utilizam qualquer parte do agente infeccioso, apenas sequências de genes contendo as instruções para a replicação de um antígeno imunizante no organismo humano.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

@@ -1,0 +1,71 @@
+<script>
+    window["aa22"] = {
+        indice: "aa22",
+        status: false
+    }
+
+    $("body").on('navegacaoComplete', function() {
+
+        if ((course.config[course.indice].id).toUpperCase() == ("aa22").toUpperCase()) {
+
+            var _tela = window[course.config[course.indice].id];
+            var _containerTela = $(".container" + (_tela.indice).toUpperCase());
+
+            //posiciona o elemento com base no tamanho real da imagem de fundo COVER
+            _containerTela.find(".posicionar").positionCSS({
+                box: _containerTela.find('.containerGeral'),
+                img_H: course.height,
+                img_W: course.width,
+            });
+
+
+            if (_tela.status == false) {
+                _tela.status = true;
+
+
+
+            } else {
+
+            }
+        }
+    })
+</script>
+
+
+<div class="containerAA22 containerAABase">
+
+    <div class="containerGeral">
+
+        <div class="baseFundo posicionar animated fadeIn delay0_2" px="300" py="200"></div>
+
+        <div class="titulo posicionar animated fadeIn" px="900" py="320">
+            <div class="animated fadeInUp delay0_6 up size35 bold laranja5">
+                FATO OU FAKE?
+            </div>
+            <div class="size26 mt30 animated fadeInUp delay0_8">
+                Informação errada ou falsa sobre a pandemia COVID-19 pode espalhar pânico ou levar as pessoas a um otimismo irreal e, com isso, a tomar atitudes que as colocam em risco.
+            </div>
+            <div class="size26 mt30 list">
+                <div class="item animated fadeInUp delay1_0">
+                    <div class="icoX">
+                        <i class="fas fa-check size40 laranja5"></i>
+                    </div>
+                    <div class="txtX">
+                        Confira as informações disseminadas. Muitas delas não são embasadas. Isso tem criado muitos problemas para o combate ao SARS-CoV-2.
+                    </div>
+                </div>
+                <div class="item animated fadeInUp delay1_2">
+                    <div class="icoX">
+                        <i class="fas fa-check size40 laranja5"></i>
+                    </div>
+                    <div class="txtX">
+                        Fake news podem ter efeitos fatais!
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

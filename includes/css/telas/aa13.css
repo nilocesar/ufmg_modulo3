@@ -9,20 +9,20 @@
     width: 100%;
     z-index: 9999;
     /* background: url(../../img/cenario1.jpg) no-repeat center;
-                                            background-size: cover; */
+                                                    background-size: cover; */
 }
 
 .containerAA13 .baseFundo {
-    background: url(../../img/aa13.png) no-repeat center;
+    background: url(../../img/aa13c.png) no-repeat center;
     background-size: cover;
 }
 
 
 /* -------------------------------- 
-                                        
-                                        Main Components 
-                                        
-                                        -------------------------------- */
+                                                
+                                                Main Components 
+                                                
+                                                -------------------------------- */
 
 .containerAA13 .tit {
     position: absolute;
@@ -32,16 +32,82 @@
 
 .containerAA13 .lista {
     position: absolute;
-    width: 1130px;
+    width: 1137px;
 }
 
-.containerAA13 .lista ul {
+.containerAA13 .list {
+    width: 60%;
+}
+
+.containerAA13 .escada {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.containerAA13 .item {
+    position: relative;
+    width: 100%;
+    background: #4983C8;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'bold';
+    border-radius: 20px;
+}
+
+.containerAA13 .item::after {
+    position: absolute;
+    content: "↓";
+    font-size: 40px;
+    bottom: -45px;
+    left: 50%;
+    margin-left: -20px;
+    font-family: "bold";
+    color: #000;
+}
+
+.containerAA13 .item:last-child:after {
+    content: "";
+}
+
+.containerAA13 .item2 {
+    position: relative;
+    width: 90%;
+    background: #30BA58;
+}
+
+.containerAA13 .item3 {
+    position: relative;
+    width: 80%;
+    background: #E77A50;
+}
+
+.containerAA13 .item4 {
+    position: relative;
+    width: 80%;
+    background: #FFD91F;
+}
+
+.containerAA13 .item5 {
+    position: relative;
+    width: 70%;
+    background: #0B918D;
+}
+
+.containerAA13 .list ul {
     /* font-size: 30px; */
 }
 
-.containerAA13 .lista .itemX {
+.containerAA13 .list .itemX {
     padding: 20px;
-    border-left: 12px solid #EC7A50;
+    border-left: 12px solid #E77A50;
     margin: 20px 10px;
     background: linear-gradient(rgba(247, 171, 80, 0.2) 0%, rgba(255, 255, 255, 0.5) 100%);
 }
@@ -97,9 +163,9 @@
 
 
 /* .containerAA13  .flexbox-slide:hover {
-            flex-shrink: 0;
-            width: 80%;
-          } */
+                    flex-shrink: 0;
+                    width: 80%;
+                  } */
 
 .containerAA13 .activeSlide {
     flex-shrink: 0;
@@ -133,8 +199,8 @@
 .containerAA13 .textSlide {
     position: relative;
     /* display: flex;
-            justify-content: center;
-            align-items: center; */
+                    justify-content: center;
+                    align-items: center; */
     width: 100%;
     height: 280px;
     background-color: #EC7A50;

@@ -9,132 +9,195 @@
     width: 100%;
     z-index: 9999;
     /* background: url(../../img/cenario1.jpg) no-repeat center;
-                                            background-size: cover; */
+                                background-size: cover; */
 }
 
 .containerAA14 .baseFundo {
-    background: url(../../img/aa14.png) no-repeat center;
+    background: url(../../img/aa14c.png) no-repeat center;
     background-size: cover;
+    /* background-color: #fff; */
 }
 
 
 /* -------------------------------- 
-                                        
-                                        Main Components 
-                                        
-                                        -------------------------------- */
+                            
+                            Main Components 
+                            
+                            -------------------------------- */
 
-.containerAA14 .tit {
+.containerAA14 .titulo {
     position: absolute;
-    width: 1137px;
+    width: 602px;
+}
+
+.containerAA14 .grafic {
+    position: absolute;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerAA14 .item {
+    position: relative;
+    width: 100%;
+    /* border-radius: 40px; */
+    overflow: hidden;
+    /* border: 3px solid #4983C8;
+        padding: 20px; */
+    font-size: 26px;
+}
+
+.containerAA14 .item2 {
+    border: 3px solid #30BA58;
+}
+
+.containerAA14 .titulD {
+    position: relative;
+    padding: 20px;
+    background: #4983C8;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-family: "bold";
+}
+
+.containerAA14 .item2 .titulD {
+    background: #30BA58;
+}
+
+.containerAA14 .conteD {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 30px;
+    height: 270px;
+}
+
+.containerAA14 li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 1.3em;
+}
+
+.containerAA14 ul li:before {
+    position: absolute;
+    content: '✓';
+    color: #EC7A50;
+    left: 0;
+    /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
+}
+
+.containerAA14 .td {
+    padding-left: 1em;
+}
+
+.containerAA14 .td:before {
+    position: absolute;
+    content: '•';
+    color: #EC7A50;
+    left: 0;
+    font-size: 30px;
+    /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
+}
+
+.containerAA14 .barraData {
+    position: absolute;
+    width: 1270px;
+    height: 149px;
     overflow: hidden;
 }
 
-.containerAA14 .lista {
-    position: absolute;
-    width: 1160px;
-}
-
-.containerAA14 ul {
-    list-style: disc;
-    padding: 30px;
-}
-
-.containerAA14 .aba {
-    position: absolute;
-    width: 1160px;
-}
-
-.containerAA14 .tabs {
+.containerAA14 .barraDataInit {
+    position: relative;
     width: 100%;
-    background-color: transparent;
+    height: 100%;
+    background: #FF9780;
+    border-top-left-radius: 200px;
+}
+
+.containerAA14 .barraDataContent {
     position: relative;
-    perspective: 1000px;
-}
-
-.containerAA14 .tabs__form {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    list-style: none;
-    position: relative;
-}
-
-.containerAA14 .tabs__label {
-    position: relative;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    /* flex: 1; */
-    padding: 10px 35px;
-    cursor: pointer;
-    color: #21A540;
-    background-color: #fff;
-    border-top: 2px solid #21A540;
-    border-left: 2px solid #21A540;
-    border-right: 2px solid #21A540;
-    border-radius: 10px 10px 0px 0px;
-    font-size: 28px;
-}
-
-.containerAA14 .tabs__label:hover {
-    color: #fff;
-    background-color: #30bf58;
-}
-
-.containerAA14 .tabs__labelAtivo {
-    color: #fff !important;
-    background-color: #30bf58 !important;
-}
-
-.containerAA14 .tabs__labelAtivo::before {
-    position: absolute;
-    content: "";
     width: 90%;
-    bottom: 0;
-    left: 50%;
-    margin-left: -45%;
-    border-top: 2px solid #fff;
+    height: 100%;
+    background: #E77A50;
+    border-top-left-radius: 200px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 50px;
+    left: 10%;
 }
 
-.containerAA14 .tabs__content {
+.containerAA14 .livro {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/livro.svg) no-repeat center;
+    background-size: contain;
+}
+
+.containerAA14 .baseFundoFeed {
     position: absolute;
-    width: 100%;
-    height: 240px;
-    z-index: -1;
-    top: 50px;
-    left: 0;
-    text-align: left;
-    padding: 20px;
-    transition: opacity 1s, transform 2s;
-    background: #30bf58;
-    color: #fff;
-    font-size: 25px;
-    box-shadow: 0px 20px 59px 5px rgba(0, 0, 0, 0.15);
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    display: none;
+    width: 1920px;
+    height: 1080px;
+    /* border: 5px solid #33649E; */
+    background-color: rgba(35, 34, 34, 0.8);
+    display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 999999999999999999999999999999999999999999999;
 }
 
-.containerAA14 .tabs__contentAtivo {
+.containerAA14 .content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    background-color: #F48C0F;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 999999999999999999999999999999999999999999999;
 }
 
-@keyframes flip {
-    0% {
-        transform: rotateX(-50deg);
-    }
-    50% {
-        transform: rotateX(20deg);
-    }
-    75% {
-        transform: rotateX(-15deg);
-    }
-    100% {
-        transform: rotateX(0deg);
-    }
+.containerAA14 .closeX {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.containerAA14 .closeX:hover {
+    color: #33649E;
+}
+
+.containerAA14 .content .ytplayer {
+    position: relative;
+    width: 1480px;
+    height: 833px;
+}
+
+.containerAA14 .feedPDF iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.containerAA14 .itemDY {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
 }
